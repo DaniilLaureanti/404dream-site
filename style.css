@@ -108,13 +108,26 @@ header {
   height: 4px;
 }
 
+/* Thumb of the horizontal navigation scrollbar.  Use the warm accent
+   colour so users can immediately see where they are in the scrollable
+   list. */
 .nav-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.25);
+  background: var(--accent-yellow);
   border-radius: 4px;
 }
 
 .nav-scroll::-webkit-scrollbar-track {
   background: transparent;
+}
+
+/* Highlight the active navigation link.  Links with aria-current="page" or
+   the active-nav class will be emphasised with the warm accent colour and
+   an underline. */
+.nav-scroll a[aria-current="page"],
+.nav-scroll a.active-nav {
+  color: var(--accent-yellow);
+  border-bottom: 2px solid var(--accent-yellow);
+  padding-bottom: 0.25rem;
 }
 
 /* Hero section */
