@@ -76,6 +76,47 @@ header {
   font-weight: 500;
 }
 
+/* Enable horizontal scrolling for navigation lists. */
+/* Wrapper that allows nav list to scroll horizontally while keeping items inline. */
+.nav-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Inline flex layout for the list inside a scrolling nav wrapper. */
+.nav-scroll ul {
+  display: inline-flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default list styling in the scrollable nav. */
+.nav-scroll li {
+  list-style: none;
+}
+
+/* Prevent nav links from wrapping onto multiple lines. */
+.nav-scroll a {
+  white-space: nowrap;
+}
+
+/* Subtle custom scrollbar for nav scroll area. */
+.nav-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 4px;
+}
+
+.nav-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* Hero section */
 .hero {
   display: flex;
