@@ -1,471 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Бог в нейронах — книга о сознании</title>
-
-  <meta name="description" content="Откройте для себя книгу «Бог в нейронах» — путешествие по памяти, эмоциям и вниманию с практиками, аудиогидами и 30-дневной программой." />
-  <meta property="og:title" content="Бог в нейронах — книга и практики" />
-  <meta property="og:description" content="Практическая книга о сознании, памяти и эмоциях. Скачайте бесплатно и углубитесь с рабочей тетрадью, аудиопроводниками и 30-дневной программой." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
+  <title>404DREAM — Daniil Laureanti</title>
+  <meta name="description" content="Books, music, visuals and projects by Daniil Laureanti / 404DREAM." />
+  <meta property="og:title" content="404DREAM — Daniil Laureanti" />
+  <meta property="og:description" content="Books, music, visuals and independent projects." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://404dream.info/" />
-  <meta property="og:image" content="https://404dream.info/book_placeholder_ru.png" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* --- Палитра --- */
-    :root {
-      --bg-color: #0c0f14;
-      --primary-color: #00ffe0;
-      --secondary-color: #1f2530;
-      --text-color: #e5e5e5;
-      --muted-color: #9aa0aa;
+    :root{
+      --bg:#0b0b0d;
+      --card:#151519;
+      --card-hover:#1c1c22;
+      --text:#f4f4f5;
+      --muted:#a7a7b0;
+      --line:#292930;
+      --radius:22px;
+      --max:620px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      display:flex;
+      justify-content:center;
+      padding:28px 18px 44px;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(255,255,255,.08), transparent 32%),
+        var(--bg);
     }
 
-    /* Шумовой оверлей */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAnklEQVRYR+2WsQqDMBBF3xANKlJgA1iAAxRQAJLAEkAkIBKYADTgCRQCO5NfutCqzuS8/Y2c5959JREyPvhWoizWDfRrsjyTBRAsJJAk9aoAkANP8nG0ZNMR6Sp5vv2QJYks1mzcx3mE1gFvJ7NbdZpxmMAXAIiWZI7zmM4BxHl+Sq/3+ELoXQr1gSYIxufjmEIiAK8L3unEmaBQgUajApRVOaZ5K68H5f7S9iX9/9gL5AL58D0xid2rgAAAABJRU5ErkJggg==');
-      opacity: 0.07;
-      z-index: 1;
+    .wrap{width:100%;max-width:var(--max)}
+    .hero{text-align:center;padding:22px 8px 28px}
+    .mark{
+      width:86px;height:86px;margin:0 auto 18px;
+      border:1px solid var(--line);border-radius:50%;
+      display:grid;place-items:center;
+      font-weight:800;font-size:22px;letter-spacing:-1px;
+      background:linear-gradient(145deg,#17171b,#0d0d0f);
+      box-shadow:0 18px 50px rgba(0,0,0,.35);
+    }
+    h1{margin:0;font-size:31px;letter-spacing:-1.2px}
+    .name{margin-top:7px;color:var(--muted);font-size:15px}
+    .tag{
+      max-width:480px;margin:18px auto 0;
+      color:#d2d2d7;font-size:16px;line-height:1.55
     }
 
-    /* Контейнер для летающих мыслей */
-    #thoughts {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 2;
+    .links{display:grid;gap:12px}
+    .link{
+      display:flex;align-items:center;gap:15px;
+      min-height:76px;padding:15px 18px;
+      text-decoration:none;color:var(--text);
+      background:rgba(21,21,25,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      transition:.18s ease;
+      box-shadow:0 8px 24px rgba(0,0,0,.15);
+    }
+    a.link:hover{
+      transform:translateY(-2px);
+      background:var(--card-hover);
+      border-color:#3b3b45;
+    }
+    .icon{
+      width:45px;height:45px;flex:0 0 45px;
+      border:1px solid #34343d;border-radius:14px;
+      display:grid;place-items:center;
+      font-size:21px;background:#101013;
+    }
+    .copy{min-width:0;flex:1}
+    .title{font-weight:700;font-size:16px}
+    .sub{margin-top:4px;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .arrow{color:#777782;font-size:22px}
+    .featured{
+      border-color:#44444e;
+      background:linear-gradient(135deg,#1b1b20,#121215);
+    }
+    .soon{opacity:.55;cursor:default}
+    .badge{
+      color:#8f8f99;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+      border:1px solid #34343d;border-radius:999px;padding:4px 7px;
     }
 
-    .thought {
-      position: absolute;
-      white-space: nowrap;
-      color: rgba(229, 229, 229, 0.15);
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
+    footer{
+      text-align:center;color:#666671;font-size:12px;
+      padding-top:30px
     }
 
-    /* Основной контейнер */
-    .wrapper {
-      position: relative;
-      z-index: 3;
-      padding: 6rem 1.5rem 3rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
-    h1 { font-size: 2.4rem; line-height: 1.2; }
-    h2 { font-size: 1.8rem; }
-    h3 { font-size: 1.4rem; }
-
-    p { margin-bottom: 1rem; }
-    ul { margin: 0 0 1rem 1.5rem; }
-    ul li { margin-bottom: 0.5rem; }
-
-    .hero { text-align: center; margin-bottom: 4rem; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1.25rem;
-      color: var(--muted-color);
-    }
-
-    .book-cover {
-      display: block;
-      width: min(520px, 92vw);
-      margin: 0.75rem auto 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0,255,224,0.18);
-    }
-
-    .cta-primary {
-      display: inline-block;
-      background: var(--primary-color);
-      color: #0c0f14;
-      padding: 0.8rem 1.6rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(0,255,224,0.5);
-      transition: transform 0.2s ease;
-    }
-    .cta-primary:hover { transform: translateY(-3px); }
-
-    .section { margin-bottom: 3.5rem; }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: var(--secondary-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      flex: 1 1 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: background 0.2s ease;
-    }
-    .card h3 { margin-bottom: 0.6rem; }
-    .card p { color: var(--muted-color); flex-grow: 1; }
-    .card .price {
-      font-size: 1.4rem;
-      color: var(--primary-color);
-      margin-bottom: 0.8rem;
-    }
-    .card a { margin-top: 1rem; align-self: flex-start; }
-
-    .faq-item { margin-bottom: 1.5rem; }
-    .faq-item h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-
-    .footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--muted-color);
-      margin-top: 4rem;
-    }
-
-    .social { margin-top: 1rem; }
-    .social a {
-      margin: 0 0.5rem;
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-      .wrapper { padding: 4rem 1rem 2rem; }
+    @media (max-width:480px){
+      body{padding:18px 14px 34px}
+      .hero{padding-top:16px}
+      h1{font-size:28px}
+      .link{min-height:72px}
     }
   </style>
 </head>
 
 <body>
-  <div id="thoughts"></div>
-
-  <div class="wrapper">
-    <header class="hero">
-      <h1>Бог в нейронах</h1>
-      <p>Понять себя, выйти из автопилота, изменить сценарии. Практическая книга о сознании, памяти, эмоциях и внимании.</p>
-
-      <!-- КАРТИНКА НА САЙТЕ -->
-      <img class="book-cover" id="bookCover" alt="Обложка книги «Бог в нейронах»" loading="eager" />
-
-      <a id="ctaTop" class="cta-primary" rel="noopener">Получить книгу</a>
-    </header>
-
-    <!-- Блок боли / узнавание -->
-    <section class="section" id="pain">
-      <h2>Узнаёте себя?</h2>
-      <p>Вы не одиноки. Мы постоянно ловим себя на одних и тех же вопросах и тупиках. Книга «Бог в нейронах» показывает, откуда они берутся — и даёт инструменты для выхода.</p>
-      <ul>
-        <li>Живёте на автопилоте и не замечаете половину дня.</li>
-        <li>Застреваете в старых эмоциях и сценариях.</li>
-        <li>Устали от шума мыслей и уведомлений.</li>
-        <li>Не можете слушать свои ощущения и потребности.</li>
-        <li>Повторяете одни и те же ошибки в отношениях.</li>
-        <li>Чувствуете, что теряете себя среди ролей и ожиданий.</li>
-        <li>Ищете, за что опереться, когда привычный мир рушится.</li>
-      </ul>
-    </section>
-
-    <!-- Блок решения -->
-    <section class="section" id="solution">
-      <h2>Как книга поможет</h2>
-      <p>Это не академический трактат, а разговор в тихом кафе. Автор сочетает нейронауку, психологию, философию и практики. Вы узнаете, как мозг создаёт чувство «я» и как выходить из автоматических связей. Книга приглашает не только читать, но и проживать: делать паузы, задавать вопросы и замечать, что отзывается.</p>
-      <ul>
-        <li>Простой язык, чтобы сложные вещи были понятны.</li>
-        <li>Практики «Проверьте на деле» в каждой главе.</li>
-        <li>Темы: эмоции, память, внимание, сон, внутренний диалог, свобода воли, культура и технологии.</li>
-        <li>Интеграция науки и личного опыта.</li>
-      </ul>
-    </section>
-
-    <!-- Блок для кого -->
-    <section class="section" id="for">
-      <h2>Для кого эта книга</h2>
-      <p>Для всех, кто хочет жить внимательнее и глубже. Она подойдёт и тем, кто никогда не задумывался о сознании, и тем, кто практикует медитацию, ведёт дневник или занимается терапией. Не нужно академического бэкграунда — достаточно желания услышать себя.</p>
-    </section>
-
-    <!-- Блок результаты -->
-    <section class="section" id="results">
-      <h2>Что вы получите</h2>
-      <ul>
-        <li>Осознаете, когда живёте на автопилоте, и научитесь возвращать себе руль.</li>
-        <li>Увидите «слепые пятна» и поймёте, что на самом деле запускает эмоции.</li>
-        <li>Поймёте, как память пересобирает прошлое и влияет на решения.</li>
-        <li>Получите инструменты для наблюдения, дневника, практик внимания и сна.</li>
-        <li>Станете внимательнее к себе, людям и миру.</li>
-      </ul>
-    </section>
-
-    <!-- Офферы -->
-    <section class="section" id="offers">
-      <h2>Продолжение и углубление</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Практикум по книге</h3>
-          <p>Рабочая тетрадь и трекер на 30 дней. Помогает закрепить знания: упражнения, поля для ответов, чек-листы.</p>
-          <div class="price">19 €</div>
-          <a id="practicumBtn" class="cta-primary" rel="noopener">Купить тетрадь</a>
-        </div>
-
-        <div class="card">
-          <h3>Аудио-пак «Проводники»</h3>
-          <p>20+ аудио-треков на 3–12 минут: короткие паузы, проводники по эмоциям, памяти, сну и интеграции.</p>
-          <div class="price">29 €</div>
-          <a id="audioBtn" class="cta-primary" rel="noopener">Купить аудио</a>
-        </div>
-
-        <div class="card">
-          <h3>30 дней практики</h3>
-          <p>Закрытый телеграм-канал с ежедневными заданиями, поддержкой и созвонами. Дисциплина и интеграция.</p>
-          <div class="price">79 €</div>
-          <a id="challengeBtn" class="cta-primary" rel="noopener">Присоединиться</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <h2>Частые вопросы</h2>
-
-      <div class="faq-item">
-        <h4>Книга действительно бесплатная?</h4>
-        <p>Да. Вы можете скачать полную версию бесплатно или оставить любую сумму. Знание не должно зависеть от статуса и денег.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Нужно ли читать книгу, чтобы купить практикум?</h4>
-        <p>Практикум создан как продолжение: он работает лучше вместе с книгой. Но если вам ближе формат упражнений, можно начать и с него.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Что входит в 30 дней практики?</h4>
-        <p>Ежедневные задания (10–15 мин), чат поддержки, еженедельные созвоны. Вы закрепляете навыки внимания, памяти, работы с эмоциями и осознанным сном.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Кому не подходит книга?</h4>
-        <p>Если вы ищете быстрые техники для манипуляций или ждёте академическую монографию. Это приглашение к процессу, а не таблетка.</p>
-      </div>
-    </section>
-
-    <!-- Автор -->
-    <section class="section" id="author">
-      <h2>Об авторе</h2>
-      <p>Даниил Лауреанти — исследователь сознания, нейроны и философские идеи. Книга собрана из чтения, наблюдений, разговоров и личного опыта. Автор не претендует на окончательную истину, он идёт рядом как внимательный проводник.</p>
-    </section>
-
-    <!-- CTA повтор -->
-    <section class="section" id="cta">
-      <h2>Начните путь сегодня</h2>
-      <p>Вы можете читать книгу линейно или выборочно. Главное — делать паузы и замечать, как меняется взгляд на себя и мир. Начните сейчас.</p>
-      <a id="ctaBottom" class="cta-primary" rel="noopener">Получить книгу</a>
-    </section>
-
-    <footer class="footer">
-      <p>
-        Copyright © <span id="year"></span> 404dream.info.
-        Дополнительные материалы, отзывы и обновления: 404dream.info.
-        Разрешено делиться ссылкой и распространять для личного использования.
+  <main class="wrap">
+    <section class="hero">
+      <div class="mark">404</div>
+      <h1>404DREAM</h1>
+      <div class="name">Daniil Laureanti</div>
+      <p class="tag">
+        I write. I make music. I create worlds.<br>
+        Books, sound, film &amp; independent projects.
       </p>
+    </section>
 
-      <div class="social">
-        <a id="tgLink" aria-label="Telegram" rel="noopener">Telegram</a>
-        <a id="igLink" aria-label="Instagram" rel="noopener">Instagram</a>
-        <a id="ytLink" aria-label="YouTube" rel="noopener">YouTube</a>
+    <section class="links" aria-label="404DREAM projects">
+      <a class="link featured" href="/book.html">
+        <div class="icon">📖</div>
+        <div class="copy">
+          <div class="title">БОГ В НЕЙРОНАХ</div>
+          <div class="sub">Книга • читать онлайн • языковые версии</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <div class="link soon" aria-disabled="true">
+        <div class="icon">🎧</div>
+        <div class="copy">
+          <div class="title">MUSIC</div>
+          <div class="sub">404DREAM • releases • streaming</div>
+        </div>
+        <div class="badge">soon</div>
       </div>
 
-      <p style="margin-top: 0.5rem; font-size: 0.75rem;">
-        Дисклеймер: материалы сайта и книги не являются медицинскими, психологическими или юридическими рекомендациями.
-        Консультации со специалистами остаются на вашей ответственности.
-      </p>
-    </footer>
-  </div>
+      <div class="link soon" aria-disabled="true">
+        <div class="icon">◉</div>
+        <div class="copy">
+          <div class="title">VISUALS / FILM</div>
+          <div class="sub">Video • drone • 360 • visual experiments</div>
+        </div>
+        <div class="badge">soon</div>
+      </div>
 
-  <script>
-    // =========================
-    // КОНСТАНТЫ / ССЫЛКИ
-    // =========================
-    const LINKS = Object.freeze({
-      siteUrl: 'https://404dream.info/',
-      coverImg: './book_placeholder_ru.png', // лежит рядом с index.html
-      bookPdf: './books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf',
+      <div class="link soon" aria-disabled="true">
+        <div class="icon">✦</div>
+        <div class="copy">
+          <div class="title">SYNAIRGY</div>
+          <div class="sub">Creative production • audio • video • AI</div>
+        </div>
+        <div class="badge">soon</div>
+      </div>
 
-      practicum: 'PRACTICUM_URL',
-      guidesAudio: 'GUIDES_AUDIO_URL',
-      challenge: 'CHALLENGE_URL',
+      <div class="link soon" aria-disabled="true">
+        <div class="icon">⌁</div>
+        <div class="copy">
+          <div class="title">ABOUT / CONTACT</div>
+          <div class="sub">About me • projects • collaborations</div>
+        </div>
+        <div class="badge">soon</div>
+      </div>
+    </section>
 
-      telegram: 'https://t.me/t_404dream',
-      instagram: 'https://www.instagram.com/404dream.info/',
-      youtube: 'YOUTUBE_URL'
-    });
-
-    // =========================
-    // ИНИЦИАЛИЗАЦИЯ ССЫЛОК/КАРТИНКИ
-    // =========================
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const cover = document.getElementById('bookCover');
-    cover.src = LINKS.coverImg;
-
-    const setHref = (id, href) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      el.href = href;
-      // внешние ссылки открываем в новой вкладке
-      if (/^https?:\/\//i.test(href)) el.target = '_blank';
-    };
-
-    setHref('ctaTop', LINKS.bookPdf);
-    setHref('ctaBottom', LINKS.bookPdf);
-
-    setHref('practicumBtn', LINKS.practicum);
-    setHref('audioBtn', LINKS.guidesAudio);
-    setHref('challengeBtn', LINKS.challenge);
-
-    setHref('tgLink', LINKS.telegram);
-    setHref('igLink', LINKS.instagram);
-    setHref('ytLink', LINKS.youtube);
-
-    // =========================
-    // ЛЕТАЮЩИЕ МЫСЛИ
-    // =========================
-    const thoughtsContainer = document.getElementById('thoughts');
-    const thoughtsList = [
-      'Почему я живу на автопилоте?',
-      'Кто я на самом деле?',
-      'Почему я снова делаю это?',
-      'Почему мне тяжело в тишине?',
-      'Как выйти из бесконечных новостей?',
-      'Кто во мне думает?',
-      'Почему я реагирую так остро?',
-      'Где проходит граница между мной и ролью?',
-      'Почему я застрял в старой обиде?',
-      'Что значит быть собой?',
-      'Почему я боюсь одиночества?',
-      'Как научиться отпускать прошлое?',
-      'Почему я не слышу тело?',
-      'Что делать с тревожными мыслями?',
-      'Куда уходит энергия?',
-      'Почему память подсовывает искажённые сцены?',
-      'Кто управляет моими эмоциями?',
-      'Почему я прокрастинирую?',
-      'Как перестать жить по чужим сценариям?',
-      'Почему я всё время в телефоне?',
-      'Где моя внутренняя опора?',
-      'Почему повторяются одни и те же отношения?',
-      'Что такое свободная воля?',
-      'Как заботиться о себе без чувства вины?',
-      'Почему я ощущаю пустоту?',
-      'Как научиться слышать свой внутренний голос?',
-      'Кто говорит во мне, когда я думаю?',
-      'Почему я легко раздражаюсь?',
-      'Что со мной делают соцсети?',
-      'Почему я забываю важные моменты?',
-      'Почему мне страшно что-то менять?',
-      'Как перестать сравнивать себя?',
-      'Что такое любовь к себе?',
-      'Почему я не могу заснуть?',
-      'Как справляться с эмоциями на работе?',
-      'Почему мысли мешают расслабиться?',
-      'Куда уходят мои желания?',
-      'Почему мне сложно слушать другого?',
-      'Как пережить потерю?',
-      'Почему я не чувствую радость?',
-      'Где мои границы?',
-      'Как отключить внутреннего критика?',
-      'Почему мне скучно?',
-      'Что такое счастье?',
-      'Кто я без социальных сетей?',
-      'Почему прошлое всё время всплывает?',
-      'Как перестать зависеть от чужого мнения?',
-      'Почему моя голова постоянно занята?',
-      'Как научиться замечать хорошее?',
-      'Почему я всё время устал?',
-      'Что мне дают эмоции?',
-      'Как понять свои ценности?',
-      'Почему я избегаю сложных тем?',
-      'Что со мной происходит, когда я сплю?',
-      'Почему я осуждаю себя?',
-      'Как перестать спорить с реальностью?',
-      'Где заканчивается контроль?',
-      'Что даёт мне тишина?',
-      'Почему страх тормозит меня?',
-      'Как увидеть свои шаблоны?',
-      'Почему я переживаю о будущем?',
-      'Кто я, когда никто не смотрит?',
-      'Как сделать шаг вперёд?'
-    ];
-
-    const numThoughts = window.innerWidth < 768 ? 30 : 60;
-
-    for (let i = 0; i < numThoughts; i++) {
-      const thought = document.createElement('span');
-      thought.className = 'thought';
-      thought.textContent = thoughtsList[Math.floor(Math.random() * thoughtsList.length)];
-
-      const fontSize = 12 + Math.random() * 16;
-      thought.style.fontSize = fontSize + 'px';
-
-      thought.dataset.speed = (0.15 + Math.random() * 0.55).toFixed(3);
-      thought.style.left = (Math.random() * 100).toFixed(2) + '%';
-      thought.style.top = (Math.random() * 100).toFixed(2) + '%';
-
-      thoughtsContainer.appendChild(thought);
-    }
-
-    function animateThoughts() {
-      const thoughts = document.querySelectorAll('.thought');
-
-      thoughts.forEach(el => {
-        let top = parseFloat(el.style.top);
-        const speed = parseFloat(el.dataset.speed);
-
-        top -= speed;
-
-        if (top < -10) {
-          top = 110;
-          el.style.left = (Math.random() * 100).toFixed(2) + '%';
-          el.textContent = thoughtsList[Math.floor(Math.random() * thoughtsList.length)];
-        }
-
-        el.style.top = top + '%';
-      });
-
-      requestAnimationFrame(animateThoughts);
-    }
-
-    animateThoughts();
-  </script>
+    <footer>© 404DREAM</footer>
+  </main>
 </body>
 </html>
