@@ -24,18 +24,21 @@
     }
 
     *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
     html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
     body{
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
       display:flex;
       justify-content:center;
+      min-height:100svh;
+      overflow-x:hidden;
       padding:28px 18px 44px;
       background:
         radial-gradient(circle at 50% -10%, rgba(255,255,255,.08), transparent 32%),
         var(--bg);
     }
 
-    .wrap{width:100%;max-width:var(--max)}
+    .wrap{width:100%;max-width:var(--max);min-width:0}
     .back{
       display:inline-flex;align-items:center;gap:8px;
       color:var(--muted);text-decoration:none;font-size:13px;
@@ -62,6 +65,7 @@
     .links{display:grid;gap:12px}
     .link{
       display:flex;align-items:center;gap:15px;
+      width:100%;
       min-height:76px;padding:15px 18px;
       text-decoration:none;color:var(--text);
       background:rgba(21,21,25,.92);
@@ -82,16 +86,17 @@
       color:#dedee2;font-weight:800;font-size:15px;
       letter-spacing:-.04em;background:#101013;
     }
-    .copy{min-width:0;flex:1}
-    .title{font-weight:700;font-size:16px}
+    .copy{min-width:0;flex:1;overflow:hidden}
+    .title{font-weight:700;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
     .sub{margin-top:4px;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .arrow{color:#777782;font-size:22px}
+    .arrow{color:#777782;font-size:22px;flex:0 0 auto}
     .featured{
       border-color:#44444e;
       background:linear-gradient(135deg,#1b1b20,#121215);
     }
     .soon{opacity:.55;cursor:default}
     .badge{
+      flex:0 0 auto;
       color:#8f8f99;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
       border:1px solid #34343d;border-radius:999px;padding:4px 7px;
     }
@@ -104,10 +109,38 @@
     a:focus-visible{outline:2px solid #777782;outline-offset:3px}
 
     @media (max-width:480px){
-      body{padding:18px 14px 34px}
-      .hero{padding-top:8px}
-      h1{font-size:28px}
-      .link{min-height:72px}
+      body{
+        padding-top:calc(14px + env(safe-area-inset-top));
+        padding-right:calc(12px + env(safe-area-inset-right));
+        padding-bottom:calc(30px + env(safe-area-inset-bottom));
+        padding-left:calc(12px + env(safe-area-inset-left));
+      }
+      .back{margin-left:-2px;padding:8px 10px}
+      .hero{padding:8px 4px 22px}
+      .mark{width:76px;height:76px;margin-bottom:16px;font-size:20px}
+      h1{font-size:clamp(25px,8vw,28px)}
+      .name{font-size:14px}
+      .tag{margin-top:14px;font-size:15px;line-height:1.45}
+      .links{gap:10px}
+      .link{min-height:68px;padding:12px 13px;gap:11px;border-radius:18px}
+      .icon{width:42px;height:42px;flex-basis:42px;border-radius:13px;font-size:14px}
+      .title{font-size:15px}
+      .sub{margin-top:3px;font-size:12px;line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
+      .arrow{font-size:20px}
+      .badge{font-size:9px;padding:4px 6px}
+      footer{padding-top:24px}
+    }
+
+    @media (max-width:360px){
+      body{
+        padding-right:calc(9px + env(safe-area-inset-right));
+        padding-left:calc(9px + env(safe-area-inset-left));
+      }
+      .link{padding:11px;gap:9px}
+      .icon{width:39px;height:39px;flex-basis:39px;font-size:13px}
+      .title{font-size:14px}
+      .sub{font-size:11.5px}
+      .badge{font-size:8px}
     }
   </style>
 </head>
