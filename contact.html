@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0b0b0d" />
-  <title>404DREAM — Daniil Laureanti</title>
-  <meta name="description" content="Books, music, visuals and projects by Daniil Laureanti / 404DREAM." />
-  <meta property="og:title" content="404DREAM — Daniil Laureanti" />
-  <meta property="og:description" content="Books, music, visuals and independent projects." />
+  <title>Contact — 404DREAM</title>
+  <meta name="description" content="Connect with Daniil Laureanti / 404DREAM on Telegram, TikTok and Threads." />
+  <meta property="og:title" content="Contact — 404DREAM" />
+  <meta property="og:description" content="Socials, projects and collaborations." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://404dream.info/" />
+  <meta property="og:url" content="https://404dream.info/contact.html" />
 
   <style>
     :root{
@@ -36,7 +36,14 @@
     }
 
     .wrap{width:100%;max-width:var(--max)}
-    .hero{text-align:center;padding:22px 8px 28px}
+    .back{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--muted);text-decoration:none;font-size:13px;
+      padding:10px 12px;margin-left:-4px;
+      border-radius:999px;transition:.18s ease;
+    }
+    .back:hover{color:var(--text);background:rgba(255,255,255,.045)}
+    .hero{text-align:center;padding:13px 8px 28px}
     .mark{
       width:86px;height:86px;margin:0 auto 18px;
       border:1px solid var(--line);border-radius:50%;
@@ -72,7 +79,8 @@
       width:45px;height:45px;flex:0 0 45px;
       border:1px solid #34343d;border-radius:14px;
       display:grid;place-items:center;
-      font-size:21px;background:#101013;
+      color:#dedee2;font-weight:800;font-size:15px;
+      letter-spacing:-.04em;background:#101013;
     }
     .copy{min-width:0;flex:1}
     .title{font-weight:700;font-size:16px}
@@ -93,9 +101,11 @@
       padding-top:30px
     }
 
+    a:focus-visible{outline:2px solid #777782;outline-offset:3px}
+
     @media (max-width:480px){
       body{padding:18px 14px 34px}
-      .hero{padding-top:16px}
+      .hero{padding-top:8px}
       h1{font-size:28px}
       .link{min-height:72px}
     }
@@ -104,61 +114,63 @@
 
 <body>
   <main class="wrap">
+    <a class="back" href="/" aria-label="Back to 404DREAM home page">← 404DREAM</a>
+
     <section class="hero">
       <div class="mark">404</div>
-      <h1>404DREAM</h1>
-      <div class="name">Daniil Laureanti</div>
+      <h1>CONTACT</h1>
+      <div class="name">Daniil Laureanti / 404DREAM</div>
       <p class="tag">
-        I write. I make music. I create worlds.<br>
-        Books, sound, film &amp; independent projects.
+        Let's connect.<br>
+        Socials, projects &amp; collaborations.
       </p>
     </section>
 
-    <section class="links" aria-label="404DREAM projects">
-      <a class="link featured" href="/book.html">
-        <div class="icon">📖</div>
+    <section class="links" aria-label="404DREAM social links">
+      <a class="link featured" href="https://t.me/t_404dream" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">TG</div>
         <div class="copy">
-          <div class="title">БОГ В НЕЙРОНАХ</div>
-          <div class="sub">Книга • читать онлайн • языковые версии</div>
+          <div class="title">TELEGRAM</div>
+          <div class="sub">@t_404dream</div>
         </div>
-        <div class="arrow">›</div>
+        <div class="arrow" aria-hidden="true">›</div>
+      </a>
+
+      <a class="link" href="https://www.tiktok.com/@404dream.info" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">TT</div>
+        <div class="copy">
+          <div class="title">TIKTOK</div>
+          <div class="sub">@404dream.info</div>
+        </div>
+        <div class="arrow" aria-hidden="true">›</div>
+      </a>
+
+      <a class="link" href="https://www.threads.com/@404dream.info?invite=0" target="_blank" rel="noopener noreferrer">
+        <div class="icon" aria-hidden="true">TH</div>
+        <div class="copy">
+          <div class="title">THREADS</div>
+          <div class="sub">@404dream.info</div>
+        </div>
+        <div class="arrow" aria-hidden="true">›</div>
       </a>
 
       <div class="link soon" aria-disabled="true">
-        <div class="icon">🎧</div>
+        <div class="icon" aria-hidden="true">f</div>
         <div class="copy">
-          <div class="title">MUSIC</div>
-          <div class="sub">404DREAM • releases • streaming</div>
+          <div class="title">FACEBOOK</div>
+          <div class="sub">Link coming soon</div>
         </div>
         <div class="badge">soon</div>
       </div>
 
       <div class="link soon" aria-disabled="true">
-        <div class="icon">◉</div>
+        <div class="icon" aria-hidden="true">X</div>
         <div class="copy">
-          <div class="title">VISUALS / FILM</div>
-          <div class="sub">Video • drone • 360 • visual experiments</div>
+          <div class="title">X / TWITTER</div>
+          <div class="sub">Link coming soon</div>
         </div>
         <div class="badge">soon</div>
       </div>
-
-      <a class="link" href="https://synairgy.ai" target="_blank" rel="noopener">
-        <div class="icon">✦</div>
-        <div class="copy">
-          <div class="title">SYNAIRGY</div>
-          <div class="sub">Creative production • audio • video • AI</div>
-        </div>
-        <div class="arrow">›</div>
-      </a>
-
-      <a class="link" href="/contact.html">
-        <div class="icon">⌁</div>
-        <div class="copy">
-          <div class="title">ABOUT / CONTACT</div>
-          <div class="sub">Socials • projects • collaborations</div>
-        </div>
-        <div class="arrow">›</div>
-      </a>
     </section>
 
     <footer>© 404DREAM</footer>
