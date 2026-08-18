@@ -9,10 +9,8 @@
   <meta property="og:title" content="Бог в нейронах — книга и практики" />
   <meta property="og:description" content="Практическая книга о сознании, памяти и эмоциях. Скачайте бесплатно и углубитесь с рабочей тетрадью, аудиопроводниками и 30-дневной программой." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://404dream.info/" />
+  <meta property="og:url" content="https://404dream.info/book.html" />
   <meta property="og:image" content="https://404dream.info/book_placeholder_ru.png" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
 
   <style>
     /* --- Палитра --- */
@@ -165,6 +163,331 @@
       .hero h1 { font-size: 2.4rem; }
       .wrapper { padding: 4rem 1rem 2rem; }
     }
+
+    /* Единый визуальный стиль 404DREAM */
+    :root {
+      --bg-color: #0b0b0d;
+      --primary-color: #f4f4f5;
+      --secondary-color: #151519;
+      --text-color: #f4f4f5;
+      --muted-color: #a7a7b0;
+      --card-hover: #1c1c22;
+      --line: #292930;
+      --radius: 22px;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100svh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at 50% -8%, rgba(255,255,255,.08), transparent 28%),
+        var(--bg-color);
+      color: var(--text-color);
+    }
+
+    body::before { opacity: .025; z-index: 0; }
+    #thoughts { opacity: .3; z-index: 0; }
+    .thought {
+      color: rgba(244,244,245,.11);
+      font-family: inherit;
+      font-weight: 600;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 860px;
+      min-width: 0;
+      padding: 28px 18px 44px;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted-color);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 10px 12px;
+      margin-left: -4px;
+      border-radius: 999px;
+      transition: .18s ease;
+    }
+
+    .cta-primary:hover { transform: none; }
+
+    .hero {
+      max-width: 650px;
+      margin: 0 auto 18px;
+      padding: 18px 8px 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 7px 11px;
+      color: #d2d2d7;
+      border: 1px solid #34343d;
+      border-radius: 999px;
+      background: rgba(16,16,19,.8);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #f4f4f5;
+      box-shadow: 0 0 12px rgba(255,255,255,.45);
+    }
+
+    h1, h2, h3 { font-family: inherit; color: var(--text-color); }
+    .hero h1 {
+      margin-bottom: 12px;
+      font-size: clamp(2.35rem, 7vw, 3.5rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .hero p {
+      max-width: 610px;
+      margin: 0 auto 18px;
+      color: #d2d2d7;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .book-cover {
+      width: min(420px, 100%);
+      margin: 20px auto 22px;
+      border: 1px solid #34343d;
+      border-radius: var(--radius);
+      box-shadow: 0 22px 60px rgba(0,0,0,.42);
+    }
+
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 22px;
+      color: var(--text-color);
+      background: linear-gradient(135deg, #1b1b20, #121215);
+      border: 1px solid #44444e;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.24);
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      transition: .18s ease;
+    }
+
+    .cta-note {
+      margin-top: 10px;
+      color: #777782;
+      font-size: 12px;
+    }
+
+    .section {
+      margin-bottom: 12px;
+      padding: 28px;
+      background: rgba(21,21,25,.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0,0,0,.15);
+    }
+
+    .section h2 {
+      margin-bottom: 12px;
+      font-size: 25px;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .section p { color: #d2d2d7; }
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul {
+      display: grid;
+      gap: 9px;
+      margin: 18px 0 0;
+      list-style: none;
+    }
+
+    .section li {
+      position: relative;
+      margin: 0;
+      padding-left: 20px;
+      color: #d2d2d7;
+    }
+
+    .section li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #777782;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .card {
+      min-width: 0;
+      padding: 20px;
+      background: #101013;
+      border: 1px solid #303037;
+      border-radius: 18px;
+      transition: .18s ease;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      color: var(--muted-color);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card .price {
+      margin: 12px 0 0;
+      color: var(--text-color);
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .card .cta-primary {
+      width: 100%;
+      min-height: 46px;
+      margin-top: 16px;
+      padding: 0 14px;
+      border-radius: 14px;
+      font-size: 13px;
+    }
+
+    .cta-primary.is-disabled {
+      opacity: .48;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .faq-item {
+      margin: 0;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item:first-of-type { margin-top: 4px; }
+    .faq-item:last-child { padding-bottom: 0; }
+    .faq-item h4 { margin-bottom: 7px; font-size: 16px; }
+    .faq-item p { margin: 0; color: var(--muted-color); }
+
+    #cta {
+      border-color: #44444e;
+      background: linear-gradient(135deg, #1b1b20, #121215);
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding: 18px 10px 0;
+      color: #666671;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .social a {
+      margin: 0;
+      padding: 8px 11px;
+      color: var(--muted-color);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .social a.is-disabled { opacity: .45; cursor: default; pointer-events: none; }
+
+    a:focus-visible { outline: 2px solid #777782; outline-offset: 3px; }
+
+    @media (hover: hover) and (pointer: fine) {
+      .back:hover { color: var(--text-color); background: rgba(255,255,255,.045); }
+      .cta-primary:hover { transform: translateY(-2px); background: var(--card-hover); }
+      .card:hover { border-color: #3b3b45; background: #131317; }
+      .social a:hover { color: var(--text-color); border-color: #3b3b45; }
+    }
+
+    @media (max-width: 720px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      #thoughts { display: none; }
+      .wrapper {
+        padding-top: calc(14px + env(safe-area-inset-top));
+        padding-right: calc(12px + env(safe-area-inset-right));
+        padding-bottom: calc(30px + env(safe-area-inset-bottom));
+        padding-left: calc(12px + env(safe-area-inset-left));
+      }
+      .back { margin-left: -2px; padding: 8px 10px; }
+      .hero { padding: 12px 2px 20px; }
+      .eyebrow { margin-bottom: 12px; font-size: 10px; }
+      .hero h1 { font-size: clamp(2.15rem, 11vw, 2.8rem); }
+      .hero p { margin-bottom: 14px; font-size: 15px; line-height: 1.45; }
+      .book-cover { width: min(360px, 100%); margin: 16px auto 18px; border-radius: 18px; }
+      .hero .cta-primary, #cta .cta-primary { width: 100%; min-height: 54px; padding: 0 14px; }
+      .section { margin-bottom: 10px; padding: 19px 17px; border-radius: 18px; }
+      .section h2 { font-size: 21px; }
+      .section p, .section li { font-size: 14px; line-height: 1.5; }
+      .section ul { gap: 8px; margin-top: 14px; }
+      .card { padding: 17px; border-radius: 16px; }
+      .card h3 { font-size: 17px; }
+      .faq-item { padding: 16px 0; }
+      .footer { margin-top: 20px; padding-right: 4px; padding-left: 4px; }
+    }
+
+    @media (max-width: 360px) {
+      .wrapper {
+        padding-right: calc(9px + env(safe-area-inset-right));
+        padding-left: calc(9px + env(safe-area-inset-left));
+      }
+      .section { padding: 17px 14px; }
+      .hero h1 { font-size: 2rem; }
+      .cta-primary { font-size: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      #thoughts { display: none; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
   </style>
 </head>
 
@@ -172,14 +495,18 @@
   <div id="thoughts"></div>
 
   <div class="wrapper">
+    <a class="back" href="/" aria-label="Вернуться на главную 404DREAM">← 404DREAM</a>
+
     <header class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Полная версия бесплатно</div>
       <h1>Бог в нейронах</h1>
       <p>Понять себя, выйти из автопилота, изменить сценарии. Практическая книга о сознании, памяти, эмоциях и внимании.</p>
 
       <!-- КАРТИНКА НА САЙТЕ -->
       <img class="book-cover" id="bookCover" alt="Обложка книги «Бог в нейронах»" loading="eager" />
 
-      <a id="ctaTop" class="cta-primary" rel="noopener">Получить книгу</a>
+      <a id="ctaTop" class="cta-primary" rel="noopener">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
+      <div class="cta-note">PDF • полная версия • без регистрации</div>
     </header>
 
     <!-- Блок боли / узнавание -->
@@ -282,14 +609,14 @@
     <!-- Автор -->
     <section class="section" id="author">
       <h2>Об авторе</h2>
-      <p>Даниил Лауреанти — исследователь сознания, нейроны и философские идеи. Книга собрана из чтения, наблюдений, разговоров и личного опыта. Автор не претендует на окончательную истину, он идёт рядом как внимательный проводник.</p>
+      <p>Даниил Лауреанти — исследователь сознания, нейронауки и философских идей. Книга собрана из чтения, наблюдений, разговоров и личного опыта. Автор не претендует на окончательную истину, он идёт рядом как внимательный проводник.</p>
     </section>
 
     <!-- CTA повтор -->
     <section class="section" id="cta">
       <h2>Начните путь сегодня</h2>
       <p>Вы можете читать книгу линейно или выборочно. Главное — делать паузы и замечать, как меняется взгляд на себя и мир. Начните сейчас.</p>
-      <a id="ctaBottom" class="cta-primary" rel="noopener">Получить книгу</a>
+      <a id="ctaBottom" class="cta-primary" rel="noopener">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
     </section>
 
     <footer class="footer">
@@ -341,9 +668,20 @@
     const setHref = (id, href) => {
       const el = document.getElementById(id);
       if (!el) return;
+
+      // Не показываем технические заглушки как рабочие ссылки.
+      if (!href || /_URL$/i.test(href)) {
+        el.removeAttribute('href');
+        el.removeAttribute('target');
+        el.setAttribute('aria-disabled', 'true');
+        el.classList.add('is-disabled');
+        if (el.classList.contains('cta-primary')) el.textContent = 'Скоро';
+        return;
+      }
+
       el.href = href;
-      // внешние ссылки открываем в новой вкладке
-      if (/^https?:\/\//i.test(href)) el.target = '_blank';
+      // Внешние ссылки и PDF открываем отдельно, чтобы не терять страницу книги.
+      if (/^https?:\/\//i.test(href) || /\.pdf(?:$|[?#])/i.test(href)) el.target = '_blank';
     };
 
     setHref('ctaTop', LINKS.bookPdf);
@@ -427,7 +765,8 @@
       'Как сделать шаг вперёд?'
     ];
 
-    const numThoughts = window.innerWidth < 768 ? 30 : 60;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const numThoughts = reduceMotion || window.innerWidth < 768 ? 0 : 36;
 
     for (let i = 0; i < numThoughts; i++) {
       const thought = document.createElement('span');
@@ -465,7 +804,7 @@
       requestAnimationFrame(animateThoughts);
     }
 
-    animateThoughts();
+    if (!reduceMotion && numThoughts > 0) animateThoughts();
   </script>
 </body>
 </html>
