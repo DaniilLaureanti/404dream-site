@@ -1,0 +1,226 @@
+.audiobook-player {
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--color-surface-soft);
+  border: 1px solid #303037;
+  border-radius: 18px;
+}
+
+.audio-engine {
+  display: none;
+}
+
+.audio-now {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.audio-kicker {
+  color: var(--color-subtle);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.audio-title {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.audio-controls {
+  display: grid;
+  grid-template-columns: 44px 54px 44px minmax(98px, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+
+.audio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text);
+  background: #19191e;
+  border: 1px solid #393941;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.audio-play {
+  width: 54px;
+  height: 54px;
+  color: var(--color-surface-soft);
+  background: var(--color-text);
+  border-color: var(--color-text);
+  font-size: 17px;
+}
+
+.audio-button:disabled,
+.audio-speed:disabled,
+.audio-progress:disabled {
+  cursor: default;
+  opacity: .35;
+}
+
+.audio-speed {
+  min-width: 0;
+  height: 42px;
+  margin-left: auto;
+  padding: 0 34px 0 12px;
+  color: var(--color-text-soft);
+  color-scheme: dark;
+  background: #19191e;
+  border: 1px solid #393941;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.audio-timeline {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.audio-time {
+  color: #85858f;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.audio-time:last-child {
+  text-align: right;
+}
+
+.audio-progress {
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--color-text);
+  cursor: pointer;
+}
+
+.audio-empty {
+  margin-top: 16px;
+  padding: 13px 14px;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px dashed #383840;
+  border-radius: 13px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.audio-track-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.audio-track {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 12px;
+  color: #c4c4cb;
+  text-align: left;
+  background: var(--color-surface);
+  border: 1px solid #2d2d34;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.audio-track.is-active {
+  color: var(--color-text);
+  background: #1b1b20;
+  border-color: #4a4a54;
+}
+
+.audio-track-number {
+  color: var(--color-subtle);
+  font-size: 11px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .audio-button:not(:disabled):hover,
+  .audio-track:hover {
+    background: #202026;
+    border-color: #555560;
+  }
+
+  .audio-play:not(:disabled):hover {
+    color: var(--color-surface-soft);
+    background: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  .audiobook-player {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .audio-controls {
+    grid-template-columns: 42px 50px 42px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .audio-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .audio-play {
+    width: 50px;
+    height: 50px;
+  }
+
+  .audio-speed {
+    width: 100%;
+    padding-right: 26px;
+    padding-left: 9px;
+    font-size: 12px;
+  }
+
+  .audio-timeline {
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 7px;
+  }
+
+  .audio-track {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .audiobook-player {
+    padding: 14px 12px;
+  }
+
+  .audio-controls {
+    grid-template-columns: 40px 48px 40px minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .audio-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .audio-play {
+    width: 48px;
+    height: 48px;
+  }
+}

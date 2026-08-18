@@ -11,198 +11,87 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://404dream.info/" />
 
-  <style>
-    :root{
-      --bg:#0b0b0d;
-      --card:#151519;
-      --card-hover:#1c1c22;
-      --text:#f4f4f5;
-      --muted:#a7a7b0;
-      --line:#292930;
-      --radius:22px;
-      --max:620px;
-    }
-
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      display:flex;
-      justify-content:center;
-      min-height:100svh;
-      overflow-x:hidden;
-      padding:28px 18px 44px;
-      background:
-        radial-gradient(circle at 50% -10%, rgba(255,255,255,.08), transparent 32%),
-        var(--bg);
-    }
-
-    .wrap{width:100%;max-width:var(--max);min-width:0}
-    .hero{text-align:center;padding:22px 8px 28px}
-    .mark{
-      width:86px;height:86px;margin:0 auto 18px;
-      border:1px solid var(--line);border-radius:50%;
-      display:grid;place-items:center;
-      font-weight:800;font-size:22px;letter-spacing:-1px;
-      background:linear-gradient(145deg,#17171b,#0d0d0f);
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-    }
-    h1{margin:0;font-size:31px;letter-spacing:-1.2px}
-    .name{margin-top:7px;color:var(--muted);font-size:15px}
-    .tag{
-      max-width:480px;margin:18px auto 0;
-      color:#d2d2d7;font-size:16px;line-height:1.55
-    }
-
-    .links{display:grid;gap:12px}
-    .link{
-      display:flex;align-items:center;gap:15px;
-      width:100%;
-      min-height:76px;padding:15px 18px;
-      text-decoration:none;color:var(--text);
-      background:rgba(21,21,25,.92);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      transition:.18s ease;
-      box-shadow:0 8px 24px rgba(0,0,0,.15);
-    }
-    a.link:hover{
-      transform:translateY(-2px);
-      background:var(--card-hover);
-      border-color:#3b3b45;
-    }
-    .icon{
-      width:45px;height:45px;flex:0 0 45px;
-      border:1px solid #34343d;border-radius:14px;
-      display:grid;place-items:center;
-      font-size:21px;background:#101013;
-    }
-    .copy{min-width:0;flex:1;overflow:hidden}
-    .title{font-weight:700;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
-    .sub{margin-top:4px;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .arrow{color:#777782;font-size:22px;flex:0 0 auto}
-    .featured{
-      border-color:#44444e;
-      background:linear-gradient(135deg,#1b1b20,#121215);
-    }
-    .soon{opacity:.55;cursor:default}
-    .badge{
-      flex:0 0 auto;
-      color:#8f8f99;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
-      border:1px solid #34343d;border-radius:999px;padding:4px 7px;
-    }
-
-    footer{
-      text-align:center;color:#666671;font-size:12px;
-      padding-top:30px
-    }
-
-    @media (max-width:480px){
-      body{
-        padding-top:calc(14px + env(safe-area-inset-top));
-        padding-right:calc(12px + env(safe-area-inset-right));
-        padding-bottom:calc(30px + env(safe-area-inset-bottom));
-        padding-left:calc(12px + env(safe-area-inset-left));
-      }
-      .hero{padding:14px 4px 22px}
-      .mark{width:76px;height:76px;margin-bottom:16px;font-size:20px}
-      h1{font-size:clamp(25px,8vw,28px)}
-      .name{font-size:14px}
-      .tag{margin-top:14px;font-size:15px;line-height:1.45}
-      .links{gap:10px}
-      .link{min-height:68px;padding:12px 13px;gap:11px;border-radius:18px}
-      .icon{width:42px;height:42px;flex-basis:42px;border-radius:13px;font-size:19px}
-      .title{font-size:15px}
-      .sub{margin-top:3px;font-size:12px;line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
-      .arrow{font-size:20px}
-      .badge{font-size:9px;padding:4px 6px}
-      footer{padding-top:24px}
-    }
-
-    @media (max-width:360px){
-      body{
-        padding-right:calc(9px + env(safe-area-inset-right));
-        padding-left:calc(9px + env(safe-area-inset-left));
-      }
-      .link{padding:11px;gap:9px}
-      .icon{width:39px;height:39px;flex-basis:39px;font-size:18px}
-      .title{font-size:14px}
-      .sub{font-size:11.5px}
-      .badge{font-size:8px}
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/site.css" />
+  <link rel="stylesheet" href="./assets/css/hub.css" />
 </head>
 
-<body>
-  <main class="wrap">
-    <section class="hero">
-      <div class="mark">404</div>
-      <h1>404DREAM</h1>
-      <div class="name">Daniil Laureanti</div>
-      <p class="tag">
-        I write. I make music. I create worlds.<br>
+<body class="hub-page hub-page--home">
+  <main class="hub-shell">
+    <header class="hub-hero">
+      <div class="brand-mark" aria-hidden="true">404</div>
+      <h1 class="hub-title">404DREAM</h1>
+      <div class="hub-byline">Daniil Laureanti</div>
+      <p class="hub-tagline">
+        I write. I make music. I create worlds.<br />
         Books, sound, film &amp; independent projects.
       </p>
-    </section>
+    </header>
 
-    <section class="links" aria-label="404DREAM projects">
-      <a class="link featured" href="/literature.html">
-        <div class="icon">✒</div>
-        <div class="copy">
-          <div class="title">ЛИТЕРАТУРА / ТЕКСТЫ</div>
-          <div class="sub">Книги • реверсивная поэзия • читать онлайн • языковые версии</div>
-        </div>
-        <div class="arrow">›</div>
+    <nav class="link-list" aria-label="404DREAM projects">
+      <a class="link-card is-featured" href="/literature.html" data-link-key="literature">
+        <span class="link-card__icon" aria-hidden="true">✒</span>
+        <span class="link-card__content">
+          <span class="link-card__title">ЛИТЕРАТУРА / ТЕКСТЫ</span>
+          <span class="link-card__description">Книги • реверсивная поэзия • читать онлайн • языковые версии</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon">🎧</div>
-        <div class="copy">
-          <div class="title">MUSIC</div>
-          <div class="sub">404DREAM • releases • streaming</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
-
-      <div class="link soon" aria-disabled="true">
-        <div class="icon">▶</div>
-        <div class="copy">
-          <div class="title">YOUTUBE</div>
-          <div class="sub">404DREAM • video • music • films</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
-
-      <div class="link soon" aria-disabled="true">
-        <div class="icon">◉</div>
-        <div class="copy">
-          <div class="title">VISUALS / FILM</div>
-          <div class="sub">Video • drone • 360 • visual experiments</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
-
-      <a class="link" href="https://synairgy.ai" target="_blank" rel="noopener">
-        <div class="icon">✦</div>
-        <div class="copy">
-          <div class="title">SYNAIRGY</div>
-          <div class="sub">Creative production • audio • video • AI</div>
-        </div>
-        <div class="arrow">›</div>
+      <a class="link-card is-soon" data-link-key="music" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">🎧</span>
+        <span class="link-card__content">
+          <span class="link-card__title">MUSIC</span>
+          <span class="link-card__description">404DREAM • releases • streaming</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <a class="link" href="/contact.html">
-        <div class="icon">⌁</div>
-        <div class="copy">
-          <div class="title">ABOUT / CONTACT</div>
-          <div class="sub">Socials • projects • collaborations</div>
-        </div>
-        <div class="arrow">›</div>
+      <a class="link-card is-soon" data-link-key="youtube" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">▶</span>
+        <span class="link-card__content">
+          <span class="link-card__title">YOUTUBE</span>
+          <span class="link-card__description">404DREAM • video • music • films</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
-    </section>
 
-    <footer>© 404DREAM</footer>
+      <a class="link-card is-soon" data-link-key="visuals" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">◉</span>
+        <span class="link-card__content">
+          <span class="link-card__title">VISUALS / FILM</span>
+          <span class="link-card__description">Video • drone • 360 • visual experiments</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
+
+      <a class="link-card" href="https://synairgy.ai" data-link-key="synairgy" target="_blank" rel="noopener noreferrer">
+        <span class="link-card__icon" aria-hidden="true">✦</span>
+        <span class="link-card__content">
+          <span class="link-card__title">SYNAIRGY</span>
+          <span class="link-card__description">Creative production • audio • video • AI</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
+
+      <a class="link-card" href="/contact.html" data-link-key="contact">
+        <span class="link-card__icon" aria-hidden="true">⌁</span>
+        <span class="link-card__content">
+          <span class="link-card__title">ABOUT / CONTACT</span>
+          <span class="link-card__description">Socials • projects • collaborations</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
+    </nav>
+
+    <footer class="site-footer hub-footer">© 404DREAM</footer>
   </main>
+
+  <script type="module" src="./assets/js/site/main.js"></script>
 </body>
 </html>

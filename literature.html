@@ -11,186 +11,69 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://404dream.info/literature.html" />
 
-  <style>
-    :root{
-      --bg:#0b0b0d;
-      --card:#151519;
-      --card-hover:#1c1c22;
-      --text:#f4f4f5;
-      --muted:#a7a7b0;
-      --line:#292930;
-      --radius:22px;
-      --max:620px;
-    }
-
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      display:flex;
-      justify-content:center;
-      min-height:100svh;
-      overflow-x:hidden;
-      padding:28px 18px 44px;
-      background:
-        radial-gradient(circle at 50% -10%, rgba(255,255,255,.08), transparent 32%),
-        var(--bg);
-    }
-
-    .wrap{width:100%;max-width:var(--max);min-width:0}
-    .back{
-      display:inline-flex;align-items:center;gap:8px;
-      color:var(--muted);text-decoration:none;font-size:13px;
-      padding:10px 12px;margin-left:-4px;
-      border-radius:999px;transition:.18s ease;
-    }
-    .back:hover{color:var(--text);background:rgba(255,255,255,.045)}
-    .hero{text-align:center;padding:13px 8px 28px}
-    .mark{
-      width:86px;height:86px;margin:0 auto 18px;
-      border:1px solid var(--line);border-radius:50%;
-      display:grid;place-items:center;
-      font-weight:800;font-size:22px;letter-spacing:-1px;
-      background:linear-gradient(145deg,#17171b,#0d0d0f);
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-    }
-    h1{margin:0;font-size:31px;line-height:1.08;letter-spacing:-1.2px}
-    .name{margin-top:9px;color:var(--muted);font-size:15px}
-    .tag{
-      max-width:500px;margin:18px auto 0;
-      color:#d2d2d7;font-size:16px;line-height:1.55
-    }
-
-    .links{display:grid;gap:12px}
-    .link{
-      display:flex;align-items:center;gap:15px;
-      width:100%;min-height:76px;padding:15px 18px;
-      text-decoration:none;color:var(--text);
-      background:rgba(21,21,25,.92);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      transition:.18s ease;
-      box-shadow:0 8px 24px rgba(0,0,0,.15);
-    }
-    a.link:hover{
-      transform:translateY(-2px);
-      background:var(--card-hover);
-      border-color:#3b3b45;
-    }
-    .icon{
-      width:45px;height:45px;flex:0 0 45px;
-      border:1px solid #34343d;border-radius:14px;
-      display:grid;place-items:center;
-      color:#dedee2;font-size:20px;font-weight:700;background:#101013;
-    }
-    .copy{min-width:0;flex:1;overflow:hidden}
-    .title{font-weight:700;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
-    .sub{margin-top:4px;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .arrow{color:#777782;font-size:22px;flex:0 0 auto}
-    .featured{
-      border-color:#44444e;
-      background:linear-gradient(135deg,#1b1b20,#121215);
-    }
-    .soon{opacity:.55;cursor:default}
-    .badge{
-      flex:0 0 auto;color:#8f8f99;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
-      border:1px solid #34343d;border-radius:999px;padding:4px 7px;
-    }
-
-    footer{text-align:center;color:#666671;font-size:12px;padding-top:30px}
-    a:focus-visible{outline:2px solid #777782;outline-offset:3px}
-
-    @media (max-width:480px){
-      body{
-        padding-top:calc(14px + env(safe-area-inset-top));
-        padding-right:calc(12px + env(safe-area-inset-right));
-        padding-bottom:calc(30px + env(safe-area-inset-bottom));
-        padding-left:calc(12px + env(safe-area-inset-left));
-      }
-      .back{margin-left:-2px;padding:8px 10px}
-      .hero{padding:8px 4px 22px}
-      .mark{width:76px;height:76px;margin-bottom:16px;font-size:20px}
-      h1{font-size:clamp(24px,7.4vw,28px)}
-      .name{font-size:14px}
-      .tag{margin-top:14px;font-size:15px;line-height:1.45}
-      .links{gap:10px}
-      .link{min-height:68px;padding:12px 13px;gap:11px;border-radius:18px}
-      .icon{width:42px;height:42px;flex-basis:42px;border-radius:13px;font-size:18px}
-      .title{font-size:15px}
-      .sub{margin-top:3px;font-size:12px;line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
-      .arrow{font-size:20px}
-      .badge{font-size:9px;padding:4px 6px}
-      footer{padding-top:24px}
-    }
-
-    @media (max-width:360px){
-      body{
-        padding-right:calc(9px + env(safe-area-inset-right));
-        padding-left:calc(9px + env(safe-area-inset-left));
-      }
-      .link{padding:11px;gap:9px}
-      .icon{width:39px;height:39px;flex-basis:39px;font-size:17px}
-      .title{font-size:14px}
-      .sub{font-size:11.5px}
-      .badge{font-size:8px}
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/site.css" />
+  <link rel="stylesheet" href="./assets/css/hub.css" />
 </head>
 
-<body>
-  <main class="wrap">
-    <a class="back" href="/" aria-label="Вернуться на главную 404DREAM">← 404DREAM</a>
+<body class="hub-page hub-page--literature">
+  <main class="hub-shell">
+    <a class="back-link" href="/" data-link-key="home" aria-label="Вернуться на главную 404DREAM">← 404DREAM</a>
 
-    <section class="hero">
-      <div class="mark">404</div>
-      <h1>ЛИТЕРАТУРА / ТЕКСТЫ</h1>
-      <div class="name">Daniil Laureanti / 404DREAM</div>
-      <p class="tag">
-        Книги, реверсивная поэзия и другие тексты.<br>
+    <header class="hub-hero">
+      <div class="brand-mark" aria-hidden="true">404</div>
+      <h1 class="hub-title">ЛИТЕРАТУРА / ТЕКСТЫ</h1>
+      <div class="hub-byline">Daniil Laureanti / 404DREAM</div>
+      <p class="hub-tagline">
+        Книги, реверсивная поэзия и другие тексты.<br />
         Читать онлайн и скачивать в доступных языковых версиях.
       </p>
-    </section>
+    </header>
 
-    <section class="links" aria-label="Литературные проекты 404DREAM">
-      <a class="link featured" href="/book.html">
-        <div class="icon" aria-hidden="true">📖</div>
-        <div class="copy">
-          <div class="title">БОГ В НЕЙРОНАХ</div>
-          <div class="sub">Книга • читать / скачать бесплатно • русский</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+    <nav class="link-list" aria-label="Литературные проекты 404DREAM">
+      <a class="link-card is-featured" href="/book.html" data-link-key="book">
+        <span class="link-card__icon" aria-hidden="true">📖</span>
+        <span class="link-card__content">
+          <span class="link-card__title">БОГ В НЕЙРОНАХ</span>
+          <span class="link-card__description">Книга • читать / скачать бесплатно • русский</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon" aria-hidden="true">↕</div>
-        <div class="copy">
-          <div class="title">РЕВЕРСИВНАЯ ПОЭЗИЯ</div>
-          <div class="sub">Стихи, которые меняют смысл при чтении снизу вверх</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
+      <a class="link-card is-soon" data-link-key="reversePoetry" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">↕</span>
+        <span class="link-card__content">
+          <span class="link-card__title">РЕВЕРСИВНАЯ ПОЭЗИЯ</span>
+          <span class="link-card__description">Стихи, которые меняют смысл при чтении снизу вверх</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon" aria-hidden="true">✎</div>
-        <div class="copy">
-          <div class="title">ЭССЕ / ДРУГИЕ ТЕКСТЫ</div>
-          <div class="sub">Наблюдения • идеи • короткая проза</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
+      <a class="link-card is-soon" data-link-key="essays" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">✎</span>
+        <span class="link-card__content">
+          <span class="link-card__title">ЭССЕ / ДРУГИЕ ТЕКСТЫ</span>
+          <span class="link-card__description">Наблюдения • идеи • короткая проза</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon" aria-hidden="true">文</div>
-        <div class="copy">
-          <div class="title">ЯЗЫКОВЫЕ ВЕРСИИ</div>
-          <div class="sub">Русский • English • Deutsch • Українська</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
-    </section>
+      <a class="link-card is-soon" data-link-key="languageEditions" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">文</span>
+        <span class="link-card__content">
+          <span class="link-card__title">ЯЗЫКОВЫЕ ВЕРСИИ</span>
+          <span class="link-card__description">Русский • English • Deutsch • Українська</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
+    </nav>
 
-    <footer>© 404DREAM</footer>
+    <footer class="site-footer hub-footer">© 404DREAM</footer>
   </main>
+
+  <script type="module" src="./assets/js/site/main.js"></script>
 </body>
 </html>

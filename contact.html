@@ -11,220 +11,99 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://404dream.info/contact.html" />
 
-  <style>
-    :root{
-      --bg:#0b0b0d;
-      --card:#151519;
-      --card-hover:#1c1c22;
-      --text:#f4f4f5;
-      --muted:#a7a7b0;
-      --line:#292930;
-      --radius:22px;
-      --max:620px;
-    }
-
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
-    body{
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      display:flex;
-      justify-content:center;
-      min-height:100svh;
-      overflow-x:hidden;
-      padding:28px 18px 44px;
-      background:
-        radial-gradient(circle at 50% -10%, rgba(255,255,255,.08), transparent 32%),
-        var(--bg);
-    }
-
-    .wrap{width:100%;max-width:var(--max);min-width:0}
-    .back{
-      display:inline-flex;align-items:center;gap:8px;
-      color:var(--muted);text-decoration:none;font-size:13px;
-      padding:10px 12px;margin-left:-4px;
-      border-radius:999px;transition:.18s ease;
-    }
-    .back:hover{color:var(--text);background:rgba(255,255,255,.045)}
-    .hero{text-align:center;padding:13px 8px 28px}
-    .mark{
-      width:86px;height:86px;margin:0 auto 18px;
-      border:1px solid var(--line);border-radius:50%;
-      display:grid;place-items:center;
-      font-weight:800;font-size:22px;letter-spacing:-1px;
-      background:linear-gradient(145deg,#17171b,#0d0d0f);
-      box-shadow:0 18px 50px rgba(0,0,0,.35);
-    }
-    h1{margin:0;font-size:31px;letter-spacing:-1.2px}
-    .name{margin-top:7px;color:var(--muted);font-size:15px}
-    .tag{
-      max-width:480px;margin:18px auto 0;
-      color:#d2d2d7;font-size:16px;line-height:1.55
-    }
-
-    .links{display:grid;gap:12px}
-    .link{
-      display:flex;align-items:center;gap:15px;
-      width:100%;
-      min-height:76px;padding:15px 18px;
-      text-decoration:none;color:var(--text);
-      background:rgba(21,21,25,.92);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      transition:.18s ease;
-      box-shadow:0 8px 24px rgba(0,0,0,.15);
-    }
-    a.link:hover{
-      transform:translateY(-2px);
-      background:var(--card-hover);
-      border-color:#3b3b45;
-    }
-    .icon{
-      width:45px;height:45px;flex:0 0 45px;
-      border:1px solid #34343d;border-radius:14px;
-      display:grid;place-items:center;
-      color:#dedee2;font-weight:800;font-size:15px;
-      letter-spacing:-.04em;background:#101013;
-    }
-    .copy{min-width:0;flex:1;overflow:hidden}
-    .title{font-weight:700;font-size:16px;line-height:1.25;overflow-wrap:anywhere}
-    .sub{margin-top:4px;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .arrow{color:#777782;font-size:22px;flex:0 0 auto}
-    .featured{
-      border-color:#44444e;
-      background:linear-gradient(135deg,#1b1b20,#121215);
-    }
-    .soon{opacity:.55;cursor:default}
-    .badge{
-      flex:0 0 auto;
-      color:#8f8f99;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
-      border:1px solid #34343d;border-radius:999px;padding:4px 7px;
-    }
-
-    footer{
-      text-align:center;color:#666671;font-size:12px;
-      padding-top:30px
-    }
-
-    a:focus-visible{outline:2px solid #777782;outline-offset:3px}
-
-    @media (max-width:480px){
-      body{
-        padding-top:calc(14px + env(safe-area-inset-top));
-        padding-right:calc(12px + env(safe-area-inset-right));
-        padding-bottom:calc(30px + env(safe-area-inset-bottom));
-        padding-left:calc(12px + env(safe-area-inset-left));
-      }
-      .back{margin-left:-2px;padding:8px 10px}
-      .hero{padding:8px 4px 22px}
-      .mark{width:76px;height:76px;margin-bottom:16px;font-size:20px}
-      h1{font-size:clamp(25px,8vw,28px)}
-      .name{font-size:14px}
-      .tag{margin-top:14px;font-size:15px;line-height:1.45}
-      .links{gap:10px}
-      .link{min-height:68px;padding:12px 13px;gap:11px;border-radius:18px}
-      .icon{width:42px;height:42px;flex-basis:42px;border-radius:13px;font-size:14px}
-      .title{font-size:15px}
-      .sub{margin-top:3px;font-size:12px;line-height:1.3;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}
-      .arrow{font-size:20px}
-      .badge{font-size:9px;padding:4px 6px}
-      footer{padding-top:24px}
-    }
-
-    @media (max-width:360px){
-      body{
-        padding-right:calc(9px + env(safe-area-inset-right));
-        padding-left:calc(9px + env(safe-area-inset-left));
-      }
-      .link{padding:11px;gap:9px}
-      .icon{width:39px;height:39px;flex-basis:39px;font-size:13px}
-      .title{font-size:14px}
-      .sub{font-size:11.5px}
-      .badge{font-size:8px}
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/site.css" />
+  <link rel="stylesheet" href="./assets/css/hub.css" />
 </head>
 
-<body>
-  <main class="wrap">
-    <a class="back" href="/" aria-label="Back to 404DREAM home page">← 404DREAM</a>
+<body class="hub-page hub-page--contact">
+  <main class="hub-shell">
+    <a class="back-link" href="/" data-link-key="home" aria-label="Back to 404DREAM home page">← 404DREAM</a>
 
-    <section class="hero">
-      <div class="mark">404</div>
-      <h1>CONTACT</h1>
-      <div class="name">Daniil Laureanti / 404DREAM</div>
-      <p class="tag">
-        Let's connect.<br>
+    <header class="hub-hero">
+      <div class="brand-mark" aria-hidden="true">404</div>
+      <h1 class="hub-title">CONTACT</h1>
+      <div class="hub-byline">Daniil Laureanti / 404DREAM</div>
+      <p class="hub-tagline">
+        Let's connect.<br />
         Socials, projects &amp; collaborations.
       </p>
-    </section>
+    </header>
 
-    <section class="links" aria-label="404DREAM contact links">
-      <a class="link featured" href="mailto:mail@404dream.info">
-        <div class="icon" aria-hidden="true">@</div>
-        <div class="copy">
-          <div class="title">COLLABORATION / BUSINESS INQUIRIES</div>
-          <div class="sub">mail@404dream.info</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+    <nav class="link-list" aria-label="404DREAM contact links">
+      <a class="link-card is-featured" href="mailto:mail@404dream.info" data-link-key="businessEmail">
+        <span class="link-card__icon" aria-hidden="true">@</span>
+        <span class="link-card__content">
+          <span class="link-card__title">COLLABORATION / BUSINESS INQUIRIES</span>
+          <span class="link-card__description">mail@404dream.info</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <a class="link" href="mailto:support@404dream.info">
-        <div class="icon" aria-hidden="true">?</div>
-        <div class="copy">
-          <div class="title">TECH SUPPORT / REPORT AN ISSUE</div>
-          <div class="sub">support@404dream.info</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+      <a class="link-card" href="mailto:support@404dream.info" data-link-key="supportEmail">
+        <span class="link-card__icon" aria-hidden="true">?</span>
+        <span class="link-card__content">
+          <span class="link-card__title">TECH SUPPORT / REPORT AN ISSUE</span>
+          <span class="link-card__description">support@404dream.info</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <a class="link" href="https://t.me/t_404dream" target="_blank" rel="noopener noreferrer">
-        <div class="icon" aria-hidden="true">TG</div>
-        <div class="copy">
-          <div class="title">TELEGRAM</div>
-          <div class="sub">@t_404dream</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+      <a class="link-card" href="https://t.me/t_404dream" data-link-key="telegram" target="_blank" rel="noopener noreferrer">
+        <span class="link-card__icon" aria-hidden="true">TG</span>
+        <span class="link-card__content">
+          <span class="link-card__title">TELEGRAM</span>
+          <span class="link-card__description">@t_404dream</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <a class="link" href="https://www.tiktok.com/@404dream.info" target="_blank" rel="noopener noreferrer">
-        <div class="icon" aria-hidden="true">TT</div>
-        <div class="copy">
-          <div class="title">TIKTOK</div>
-          <div class="sub">@404dream.info</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+      <a class="link-card" href="https://www.tiktok.com/@404dream.info" data-link-key="tiktok" target="_blank" rel="noopener noreferrer">
+        <span class="link-card__icon" aria-hidden="true">TT</span>
+        <span class="link-card__content">
+          <span class="link-card__title">TIKTOK</span>
+          <span class="link-card__description">@404dream.info</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <a class="link" href="https://www.threads.com/@404dream.info?invite=0" target="_blank" rel="noopener noreferrer">
-        <div class="icon" aria-hidden="true">TH</div>
-        <div class="copy">
-          <div class="title">THREADS</div>
-          <div class="sub">@404dream.info</div>
-        </div>
-        <div class="arrow" aria-hidden="true">›</div>
+      <a class="link-card" href="https://www.threads.com/@404dream.info?invite=0" data-link-key="threads" target="_blank" rel="noopener noreferrer">
+        <span class="link-card__icon" aria-hidden="true">TH</span>
+        <span class="link-card__content">
+          <span class="link-card__title">THREADS</span>
+          <span class="link-card__description">@404dream.info</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
       </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon" aria-hidden="true">f</div>
-        <div class="copy">
-          <div class="title">FACEBOOK</div>
-          <div class="sub">Link coming soon</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
+      <a class="link-card is-soon" data-link-key="facebook" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">f</span>
+        <span class="link-card__content">
+          <span class="link-card__title">FACEBOOK</span>
+          <span class="link-card__description">Link coming soon</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
 
-      <div class="link soon" aria-disabled="true">
-        <div class="icon" aria-hidden="true">X</div>
-        <div class="copy">
-          <div class="title">X / TWITTER</div>
-          <div class="sub">Link coming soon</div>
-        </div>
-        <div class="badge">soon</div>
-      </div>
-    </section>
+      <a class="link-card is-soon" data-link-key="x" aria-disabled="true">
+        <span class="link-card__icon" aria-hidden="true">X</span>
+        <span class="link-card__content">
+          <span class="link-card__title">X / TWITTER</span>
+          <span class="link-card__description">Link coming soon</span>
+        </span>
+        <span class="link-card__arrow" aria-hidden="true">›</span>
+        <span class="link-card__badge" aria-hidden="true">soon</span>
+      </a>
+    </nav>
 
-    <footer>© 404DREAM</footer>
+    <footer class="site-footer hub-footer">© 404DREAM</footer>
   </main>
+
+  <script type="module" src="./assets/js/site/main.js"></script>
 </body>
 </html>

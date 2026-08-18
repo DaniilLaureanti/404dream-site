@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0d" />
   <title>Бог в нейронах — книга о сознании</title>
 
   <meta name="description" content="Откройте для себя книгу «Бог в нейронах» — путешествие по памяти, эмоциям и вниманию с практиками, аудиогидами и 30-дневной программой." />
@@ -12,29 +13,29 @@
   <meta property="og:url" content="https://404dream.info/book.html" />
   <meta property="og:image" content="https://404dream.info/book_placeholder_ru.png" />
 
+  <link rel="stylesheet" href="./assets/css/site.css" />
   <link rel="stylesheet" href="./assets/css/book.css" />
+  <link rel="stylesheet" href="./assets/css/components/audiobook-player.css" />
 </head>
 
-<body>
-  <div id="thoughts"></div>
+<body class="book-page">
+  <div id="thoughts" aria-hidden="true"></div>
 
-  <div class="wrapper">
-    <a class="back" href="/literature.html" aria-label="Вернуться к литературе и текстам">← ЛИТЕРАТУРА / ТЕКСТЫ</a>
+  <main class="book-shell">
+    <a class="back-link" href="/literature.html" data-link-key="literature" aria-label="Вернуться к литературе и текстам">← ЛИТЕРАТУРА / ТЕКСТЫ</a>
 
-    <header class="hero">
-      <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Полная версия бесплатно</div>
+    <header class="book-hero">
+      <div class="book-eyebrow"><span class="book-eyebrow__dot" aria-hidden="true"></span>Полная версия бесплатно</div>
       <h1>Бог в нейронах</h1>
       <p>Понять себя, выйти из автопилота, изменить сценарии. Практическая книга о сознании, памяти, эмоциях и внимании.</p>
 
-      <!-- КАРТИНКА НА САЙТЕ -->
-      <img class="book-cover" id="bookCover" alt="Обложка книги «Бог в нейронах»" loading="eager" />
+      <img class="book-cover" src="./book_placeholder_ru.png" alt="Обложка книги «Бог в нейронах»" loading="eager" />
 
-      <a id="ctaTop" class="cta-primary" rel="noopener">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
-      <div class="cta-note">PDF • полная версия • без регистрации</div>
+      <a class="action-button" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" target="_blank" rel="noopener noreferrer">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
+      <div class="book-cta-note">PDF • полная версия • без регистрации</div>
     </header>
 
-    <!-- Встроенная аудиоверсия -->
-    <section class="section" id="audiobook">
+    <section class="book-section" id="audiobook">
       <h2>Аудиокнига</h2>
       <p>Слушайте главы по порядку или выбирайте нужную в списке. После окончания главы следующая включится автоматически.</p>
 
@@ -71,8 +72,7 @@
       </div>
     </section>
 
-    <!-- Блок боли / узнавание -->
-    <section class="section" id="pain">
+    <section class="book-section" id="pain">
       <h2>Узнаёте себя?</h2>
       <p>Вы не одиноки. Мы постоянно ловим себя на одних и тех же вопросах и тупиках. Книга «Бог в нейронах» показывает, откуда они берутся — и даёт инструменты для выхода.</p>
       <ul>
@@ -86,8 +86,7 @@
       </ul>
     </section>
 
-    <!-- Блок решения -->
-    <section class="section" id="solution">
+    <section class="book-section" id="solution">
       <h2>Как книга поможет</h2>
       <p>Это не академический трактат, а разговор в тихом кафе. Автор сочетает нейронауку, психологию, философию и практики. Вы узнаете, как мозг создаёт чувство «я» и как выходить из автоматических связей. Книга приглашает не только читать, но и проживать: делать паузы, задавать вопросы и замечать, что отзывается.</p>
       <ul>
@@ -98,14 +97,12 @@
       </ul>
     </section>
 
-    <!-- Блок для кого -->
-    <section class="section" id="for">
+    <section class="book-section" id="for">
       <h2>Для кого эта книга</h2>
       <p>Для всех, кто хочет жить внимательнее и глубже. Она подойдёт и тем, кто никогда не задумывался о сознании, и тем, кто практикует медитацию, ведёт дневник или занимается терапией. Не нужно академического бэкграунда — достаточно желания услышать себя.</p>
     </section>
 
-    <!-- Блок результаты -->
-    <section class="section" id="results">
+    <section class="book-section" id="results">
       <h2>Что вы получите</h2>
       <ul>
         <li>Осознаете, когда живёте на автопилоте, и научитесь возвращать себе руль.</li>
@@ -116,35 +113,33 @@
       </ul>
     </section>
 
-    <!-- Офферы -->
-    <section class="section" id="offers">
+    <section class="book-section" id="offers">
       <h2>Продолжение и углубление</h2>
-      <div class="cards">
-        <div class="card">
+      <div class="offer-grid">
+        <article class="offer-card">
           <h3>Практикум по книге</h3>
           <p>Рабочая тетрадь и трекер на 30 дней. Помогает закрепить знания: упражнения, поля для ответов, чек-листы.</p>
-          <div class="price">19 €</div>
-          <a id="practicumBtn" class="cta-primary" rel="noopener">Купить тетрадь</a>
-        </div>
+          <div class="offer-card__price">19 €</div>
+          <a class="action-button is-disabled" data-link-key="practicum" data-disabled-label="Скоро" data-active-label="Купить тетрадь" aria-disabled="true"><span data-link-label>Скоро</span></a>
+        </article>
 
-        <div class="card">
+        <article class="offer-card">
           <h3>Аудио-пак «Проводники»</h3>
           <p>20+ аудио-треков на 3–12 минут: короткие паузы, проводники по эмоциям, памяти, сну и интеграции.</p>
-          <div class="price">29 €</div>
-          <a id="audioBtn" class="cta-primary" rel="noopener">Купить аудио</a>
-        </div>
+          <div class="offer-card__price">29 €</div>
+          <a class="action-button is-disabled" data-link-key="guidesAudio" data-disabled-label="Скоро" data-active-label="Купить аудио" aria-disabled="true"><span data-link-label>Скоро</span></a>
+        </article>
 
-        <div class="card">
+        <article class="offer-card">
           <h3>30 дней практики</h3>
           <p>Закрытый телеграм-канал с ежедневными заданиями, поддержкой и созвонами. Дисциплина и интеграция.</p>
-          <div class="price">79 €</div>
-          <a id="challengeBtn" class="cta-primary" rel="noopener">Присоединиться</a>
-        </div>
+          <div class="offer-card__price">79 €</div>
+          <a class="action-button is-disabled" data-link-key="challenge" data-disabled-label="Скоро" data-active-label="Присоединиться" aria-disabled="true"><span data-link-label>Скоро</span></a>
+        </article>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section class="book-section" id="faq">
       <h2>Частые вопросы</h2>
 
       <div class="faq-item">
@@ -168,38 +163,36 @@
       </div>
     </section>
 
-    <!-- Автор -->
-    <section class="section" id="author">
+    <section class="book-section" id="author">
       <h2>Об авторе</h2>
       <p>Даниил Лауреанти — исследователь сознания, нейронауки и философских идей. Книга собрана из чтения, наблюдений, разговоров и личного опыта. Автор не претендует на окончательную истину, он идёт рядом как внимательный проводник.</p>
     </section>
 
-    <!-- CTA повтор -->
-    <section class="section" id="cta">
+    <section class="book-section book-cta" id="cta">
       <h2>Начните путь сегодня</h2>
       <p>Вы можете читать книгу линейно или выборочно. Главное — делать паузы и замечать, как меняется взгляд на себя и мир. Начните сейчас.</p>
-      <a id="ctaBottom" class="cta-primary" rel="noopener">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
+      <a class="action-button" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" target="_blank" rel="noopener noreferrer">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
     </section>
 
-    <footer class="footer">
+    <footer class="site-footer book-footer">
       <p>
-        Copyright © <span id="year"></span> 404dream.info.
+        Copyright © <span data-current-year></span> 404dream.info.
         Дополнительные материалы, отзывы и обновления: 404dream.info.
         Разрешено делиться ссылкой и распространять для личного использования.
       </p>
 
-      <div class="social">
-        <a id="tgLink" aria-label="Telegram" rel="noopener">Telegram</a>
-        <a id="igLink" aria-label="Instagram" rel="noopener">Instagram</a>
-        <a id="ytLink" aria-label="YouTube" rel="noopener">YouTube</a>
+      <div class="book-social">
+        <a href="https://t.me/t_404dream" data-link-key="telegram" aria-label="Telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://www.instagram.com/404dream.info/" data-link-key="instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="is-disabled" data-link-key="youtube" aria-label="YouTube" aria-disabled="true">YouTube</a>
       </div>
 
-      <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+      <p class="book-disclaimer">
         Дисклеймер: материалы сайта и книги не являются медицинскими, психологическими или юридическими рекомендациями.
         Консультации со специалистами остаются на вашей ответственности.
       </p>
     </footer>
-  </div>
+  </main>
 
   <script type="module" src="./assets/js/book/main.js"></script>
 </body>

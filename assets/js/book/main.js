@@ -1,11 +1,11 @@
 import { AudiobookPlayer } from './audiobook-player.js';
 import { AUDIOBOOK_TRACKS } from './audiobook-tracks.js';
 import { AudioSourceResolver, googleDriveSourceAdapter } from './audio-source-resolver.js';
-import { BOOK_LINKS } from './page-config.js';
-import { initializeBookPage } from './page-links.js';
 import { startThoughts } from './thoughts.js';
+import { SITE_LINKS } from '../site/site-config.js';
+import { initializeSiteShell } from '../site/site-shell.js';
 
-initializeBookPage({ links: BOOK_LINKS });
+initializeSiteShell({ links: SITE_LINKS });
 
 const sourceResolver = new AudioSourceResolver({
   baseUrl: document.baseURI,
