@@ -22,7 +22,7 @@ export const SITE_LINKS = Object.freeze({
   businessEmail: 'mailto:mail@404dream.info',
   supportEmail: 'mailto:support@404dream.info',
   telegram: 'https://t.me/t_404dream',
-  instagram: 'https://www.instagram.com/404dream.info/',
+  instagram: 'https://www.instagram.com/404dream.info',
   tiktok: 'https://www.tiktok.com/@404dream.info',
   threads: 'https://www.threads.com/@404dream.info?invite=0',
   facebook: null,
