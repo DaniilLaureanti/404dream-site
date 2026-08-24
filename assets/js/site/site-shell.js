@@ -31,7 +31,10 @@ function enableLink(element, href) {
     getLabelTarget(element).textContent = element.dataset.activeLabel;
   }
 
-  if (shouldOpenSeparately(href)) {
+  if (element.hasAttribute('download')) {
+    element.removeAttribute('target');
+    element.removeAttribute('rel');
+  } else if (shouldOpenSeparately(href)) {
     element.setAttribute('target', '_blank');
     element.setAttribute('rel', 'noopener noreferrer');
   } else {

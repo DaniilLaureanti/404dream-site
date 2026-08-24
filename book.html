@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="./assets/css/site.css" />
   <link rel="stylesheet" href="./assets/css/book.css" />
+  <link rel="stylesheet" href="./assets/css/components/pdf-reader.css" />
   <link rel="stylesheet" href="./assets/css/components/audiobook-player.css" />
 </head>
 
@@ -31,9 +32,41 @@
 
       <img class="book-cover" src="./book_placeholder_ru.png" alt="Обложка книги «Бог в нейронах»" loading="eager" />
 
-      <a class="action-button" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" target="_blank" rel="noopener noreferrer">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
-      <div class="book-cta-note">PDF • полная версия • без регистрации</div>
+      <div class="book-actions">
+        <a class="action-button" href="#reader">Читать онлайн <span aria-hidden="true">↓</span></a>
+        <a class="action-button action-button--secondary" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" download="Bog_v_neyronakh_Daniil_Laureanti_RU.pdf">Скачать PDF <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="book-cta-note">Онлайн-читалка • полная версия • без регистрации</div>
     </header>
+
+    <section class="book-section book-reader-section" id="reader">
+      <h2>Читать книгу онлайн</h2>
+      <p>Книга загружается прямо на этой странице. Листайте её по одной странице кнопками, стрелками клавиатуры или укажите нужный номер.</p>
+
+      <div class="pdf-reader" id="pdfReader" data-state="loading" tabindex="0" aria-label="Онлайн-читалка книги «Бог в нейронах»" aria-busy="true">
+        <div class="pdf-reader__toolbar" role="group" aria-label="Навигация по книге">
+          <button class="pdf-reader__button" id="pdfPrevious" type="button" aria-label="Предыдущая страница" disabled>←</button>
+
+          <div class="pdf-reader__pagination">
+            <label class="pdf-reader__page-label" for="pdfPageInput">Страница</label>
+            <input class="pdf-reader__page-input" id="pdfPageInput" type="number" min="1" value="1" inputmode="numeric" aria-label="Номер страницы" disabled />
+            <span>из <span id="pdfTotalPages">—</span></span>
+          </div>
+
+          <button class="pdf-reader__button" id="pdfNext" type="button" aria-label="Следующая страница" disabled>→</button>
+        </div>
+
+        <div class="pdf-reader__status" id="pdfStatus" role="status" aria-live="polite">Загружаем книгу…</div>
+
+        <div class="pdf-reader__viewport" id="pdfViewport">
+          <div class="pdf-reader__stage" id="pdfStage">
+            <canvas class="pdf-reader__canvas" id="pdfCanvas" role="img" hidden></canvas>
+          </div>
+        </div>
+
+        <div class="pdf-reader__hint">← → для перелистывания • на телефоне можно свайпать</div>
+      </div>
+    </section>
 
     <section class="book-section" id="audiobook">
       <h2>Аудиокнига</h2>
@@ -171,7 +204,10 @@
     <section class="book-section book-cta" id="cta">
       <h2>Начните путь сегодня</h2>
       <p>Вы можете читать книгу линейно или выборочно. Главное — делать паузы и замечать, как меняется взгляд на себя и мир. Начните сейчас.</p>
-      <a class="action-button" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" target="_blank" rel="noopener noreferrer">Читать / скачать бесплатно <span aria-hidden="true">↗</span></a>
+      <div class="book-actions">
+        <a class="action-button" href="#reader">Продолжить чтение <span aria-hidden="true">↑</span></a>
+        <a class="action-button action-button--secondary" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" download="Bog_v_neyronakh_Daniil_Laureanti_RU.pdf">Скачать PDF <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
     <footer class="site-footer book-footer">

@@ -42,6 +42,10 @@ class FakeElement {
     return this.attributes.get(name) ?? null;
   }
 
+  hasAttribute(name) {
+    return this.attributes.has(name);
+  }
+
   querySelector(selector) {
     return selector === '[data-link-label]' ? this.label : null;
   }
@@ -50,6 +54,8 @@ class FakeElement {
 test('site shell activates configured links and keeps placeholders inert', () => {
   const external = new FakeElement({ key: 'external', classes: ['link-card', 'is-soon'] });
   const internal = new FakeElement({ key: 'internal' });
+  const download = new FakeElement({ key: 'download' });
+  download.setAttribute('download', 'book.pdf');
   const placeholderLabel = new FakeElement();
   const placeholder = new FakeElement({ key: 'placeholder', label: placeholderLabel });
   placeholder.dataset.disabledLabel = 'Скоро';
@@ -57,7 +63,7 @@ test('site shell activates configured links and keeps placeholders inert', () =>
 
   const documentRef = {
     querySelectorAll(selector) {
-      if (selector === '[data-link-key]') return [external, internal, placeholder];
+      if (selector === '[data-link-key]') return [external, internal, download, placeholder];
       if (selector === '[data-current-year]') return [year];
       return [];
     }
@@ -67,6 +73,7 @@ test('site shell activates configured links and keeps placeholders inert', () =>
     links: {
       external: 'https://example.com',
       internal: '/contact.html',
+      download: '/book.pdf',
       placeholder: null
     },
     documentRef,
@@ -80,6 +87,11 @@ test('site shell activates configured links and keeps placeholders inert', () =>
 
   assert.equal(internal.getAttribute('href'), '/contact.html');
   assert.equal(internal.getAttribute('target'), null);
+
+  assert.equal(download.getAttribute('href'), '/book.pdf');
+  assert.equal(download.getAttribute('download'), 'book.pdf');
+  assert.equal(download.getAttribute('target'), null);
+  assert.equal(download.getAttribute('rel'), null);
 
   assert.equal(placeholder.getAttribute('href'), null);
   assert.equal(placeholder.getAttribute('aria-disabled'), 'true');

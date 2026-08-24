@@ -154,6 +154,24 @@
   pointer-events: none;
 }
 
+.book-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.book-actions .action-button {
+  min-width: 210px;
+}
+
+.action-button--secondary {
+  color: var(--color-text-soft);
+  background: transparent;
+  border-color: var(--color-line);
+  box-shadow: none;
+}
+
 .book-cta-note {
   margin-top: 10px;
   color: var(--color-subtle);
@@ -167,6 +185,10 @@
   border: 1px solid var(--color-line);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
+}
+
+.book-reader-section {
+  scroll-margin-top: 16px;
 }
 
 .book-section h2 {
@@ -384,6 +406,17 @@
     width: 100%;
     min-height: 54px;
     padding: 0 14px;
+  }
+
+  .book-actions {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .book-actions .action-button {
+    min-width: 0;
   }
 
   .book-section {
