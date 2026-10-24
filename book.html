@@ -13,33 +13,46 @@
   <meta property="og:url" content="https://404dream.info/book.html" />
   <meta property="og:image" content="https://404dream.info/book_placeholder_ru.png" />
 
-  <link rel="stylesheet" href="./assets/css/site.css" />
-  <link rel="stylesheet" href="./assets/css/book.css" />
-  <link rel="stylesheet" href="./assets/css/components/pdf-reader.css" />
-  <link rel="stylesheet" href="./assets/css/components/audiobook-player.css" />
+  <link rel="stylesheet" href="./assets/css/site.css?v=20261024-theme" />
+  <link rel="stylesheet" href="./assets/css/book.css?v=20261024-theme" />
+  <link rel="stylesheet" href="./assets/css/components/pdf-reader.css?v=20261024-theme" />
+  <link rel="stylesheet" href="./assets/css/components/audiobook-player.css?v=20261024-theme" />
 </head>
 
 <body class="book-page">
-  <div id="thoughts" aria-hidden="true"></div>
-
-  <main class="book-shell">
-    <a class="back-link" href="/literature.html" data-link-key="literature" aria-label="Вернуться к литературе и текстам">← ЛИТЕРАТУРА / ТЕКСТЫ</a>
+  <a class="site-skip" href="#main-content">К содержимому</a>
+  <div class="site-shell book-shell">
+    <header class="site-header">
+      <a class="site-brand" href="/" data-link-key="home" aria-label="404DREAM — главная">← 404DREAM</a>
+      <span class="site-header__label">LITERATURE / BOOK / RU</span>
+      <nav class="site-nav" aria-label="Разделы 404DREAM" lang="ru">
+        <a href="/literature.html" data-link-key="literature" aria-current="page">Тексты</a>
+        <a href="/concept.html" data-link-key="concept">Концепт</a>
+        <a href="/contact.html" data-link-key="contact">Контакт</a>
+      </nav>
+    </header>
+    <main id="main-content">
 
     <header class="book-hero">
-      <div class="book-eyebrow"><span class="book-eyebrow__dot" aria-hidden="true"></span>Полная версия бесплатно</div>
-      <h1>Бог в нейронах</h1>
-      <p>Понять себя, выйти из автопилота, изменить сценарии. Практическая книга о сознании, памяти, эмоциях и внимании.</p>
-
-      <img class="book-cover" src="./book_placeholder_ru.png" alt="Обложка книги «Бог в нейронах»" loading="eager" />
-
-      <div class="book-actions">
-        <a class="action-button" href="#reader">Читать онлайн <span aria-hidden="true">↓</span></a>
-        <a class="action-button action-button--secondary" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" download="Bog_v_neyronakh_Daniil_Laureanti_RU.pdf">Скачать PDF <span aria-hidden="true">↓</span></a>
+      <div class="book-hero__copy">
+        <p class="site-eyebrow">404DREAM / LITERATURE / RU</p>
+        <div class="book-eyebrow"><span class="book-eyebrow__dot" aria-hidden="true"></span>Полная версия бесплатно</div>
+        <h1>Бог<br /><span>в нейронах</span></h1>
+        <p>Понять себя, выйти из автопилота, изменить сценарии. Практическая книга о сознании, памяти, эмоциях и внимании.</p>
+        <div class="book-actions">
+          <a class="action-button" href="#reader">Читать онлайн <span aria-hidden="true">↓</span></a>
+          <a class="action-button action-button--secondary" href="./books/for_peoples/Бог_в_нейронах_-_Даниил_Лауреанти_RU.pdf" data-link-key="bookPdf" download="Bog_v_neyronakh_Daniil_Laureanti_RU.pdf">Скачать PDF <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="book-cta-note">Онлайн-читалка • полная версия • без регистрации</div>
       </div>
-      <div class="book-cta-note">Онлайн-читалка • полная версия • без регистрации</div>
+      <figure class="book-cover-frame">
+        <div class="book-cover-frame__label"><span>BOOK / 001</span><span>RU / FULL EDITION</span></div>
+        <img class="book-cover" src="./book_placeholder_ru.png" alt="Обложка книги «Бог в нейронах»" width="864" height="1184" loading="eager" />
+        <figcaption><span>Daniil Laureanti</span><span>404DREAM</span></figcaption>
+      </figure>
     </header>
 
-    <section class="book-section book-reader-section" id="reader">
+    <section class="book-section book-reader-section" id="reader" data-section-label="ЧИТАТЬ / READ">
       <h2>Читать книгу онлайн</h2>
       <p>Книга загружается прямо на этой странице. Листайте её по одной странице кнопками, стрелками клавиатуры или укажите нужный номер.</p>
 
@@ -68,7 +81,7 @@
       </div>
     </section>
 
-    <section class="book-section" id="audiobook">
+    <section class="book-section" id="audiobook" data-section-label="СЛУШАТЬ / LISTEN">
       <h2>Аудиокнига</h2>
       <p>Слушайте главы по порядку или выбирайте нужную в списке. После окончания главы следующая включится автоматически.</p>
 
@@ -105,7 +118,7 @@
       </div>
     </section>
 
-    <section class="book-section" id="pain">
+    <section class="book-section" id="pain" data-section-label="НАБЛЮДЕНИЕ / OBSERVE">
       <h2>Узнаёте себя?</h2>
       <p>Вы не одиноки. Мы постоянно ловим себя на одних и тех же вопросах и тупиках. Книга «Бог в нейронах» показывает, откуда они берутся — и даёт инструменты для выхода.</p>
       <ul>
@@ -119,7 +132,7 @@
       </ul>
     </section>
 
-    <section class="book-section" id="solution">
+    <section class="book-section" id="solution" data-section-label="ПОНИМАНИЕ / UNDERSTAND">
       <h2>Как книга поможет</h2>
       <p>Это не академический трактат, а разговор в тихом кафе. Автор сочетает нейронауку, психологию, философию и практики. Вы узнаете, как мозг создаёт чувство «я» и как выходить из автоматических связей. Книга приглашает не только читать, но и проживать: делать паузы, задавать вопросы и замечать, что отзывается.</p>
       <ul>
@@ -130,12 +143,12 @@
       </ul>
     </section>
 
-    <section class="book-section" id="for">
+    <section class="book-section" id="for" data-section-label="ДЛЯ КОГО / FOR YOU">
       <h2>Для кого эта книга</h2>
       <p>Для всех, кто хочет жить внимательнее и глубже. Она подойдёт и тем, кто никогда не задумывался о сознании, и тем, кто практикует медитацию, ведёт дневник или занимается терапией. Не нужно академического бэкграунда — достаточно желания услышать себя.</p>
     </section>
 
-    <section class="book-section" id="results">
+    <section class="book-section" id="results" data-section-label="ПРАКТИКА / PRACTICE">
       <h2>Что вы получите</h2>
       <ul>
         <li>Осознаете, когда живёте на автопилоте, и научитесь возвращать себе руль.</li>
@@ -146,7 +159,7 @@
       </ul>
     </section>
 
-    <section class="book-section" id="offers">
+    <section class="book-section" id="offers" data-section-label="ПРОДОЛЖЕНИЕ / CONTINUE">
       <h2>Продолжение и углубление</h2>
       <div class="offer-grid">
         <article class="offer-card">
@@ -172,7 +185,7 @@
       </div>
     </section>
 
-    <section class="book-section" id="faq">
+    <section class="book-section" id="faq" data-section-label="ВОПРОСЫ / FAQ">
       <h2>Частые вопросы</h2>
 
       <div class="faq-item">
@@ -196,12 +209,12 @@
       </div>
     </section>
 
-    <section class="book-section" id="author">
+    <section class="book-section" id="author" data-section-label="АВТОР / AUTHOR">
       <h2>Об авторе</h2>
       <p>Даниил Лауреанти — исследователь сознания, нейронауки и философских идей. Книга собрана из чтения, наблюдений, разговоров и личного опыта. Автор не претендует на окончательную истину, он идёт рядом как внимательный проводник.</p>
     </section>
 
-    <section class="book-section book-cta" id="cta">
+    <section class="book-section book-cta" id="cta" data-section-label="НАЧАТЬ / START">
       <h2>Начните путь сегодня</h2>
       <p>Вы можете читать книгу линейно или выборочно. Главное — делать паузы и замечать, как меняется взгляд на себя и мир. Начните сейчас.</p>
       <div class="book-actions">
@@ -210,9 +223,10 @@
       </div>
     </section>
 
+    </main>
     <footer class="site-footer book-footer">
+      <div class="site-footer--bar"><span>© <span data-current-year>2026</span> 404DREAM / Daniil Laureanti</span><span>STYLE: 404 NOT FOUND</span></div>
       <p>
-        Copyright © <span data-current-year></span> 404dream.info.
         Дополнительные материалы, отзывы и обновления: 404dream.info.
         Разрешено делиться ссылкой и распространять для личного использования.
       </p>
@@ -228,7 +242,7 @@
         Консультации со специалистами остаются на вашей ответственности.
       </p>
     </footer>
-  </main>
+  </div>
 
   <script type="module" src="./assets/js/book/main.js"></script>
 </body>

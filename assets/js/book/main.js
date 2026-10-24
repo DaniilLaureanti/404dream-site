@@ -3,7 +3,6 @@ import { AUDIOBOOK_TRACKS } from './audiobook-tracks.js';
 import { AudioSourceResolver, googleDriveSourceAdapter } from './audio-source-resolver.js';
 import { PdfReader } from './pdf-reader.js';
 import { loadPdfDocument } from './pdfjs-adapter.js';
-import { startThoughts } from './thoughts.js';
 import { SITE_LINKS } from '../site/site-config.js';
 import { initializeSiteShell } from '../site/site-shell.js';
 
@@ -54,7 +53,3 @@ const audiobookPlayer = new AudiobookPlayer({
 });
 
 audiobookPlayer.mount();
-
-startThoughts({
-  container: document.getElementById('thoughts')
-});

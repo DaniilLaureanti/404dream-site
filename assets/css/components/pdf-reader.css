@@ -2,8 +2,8 @@
   margin-top: 20px;
   padding: 18px;
   background: var(--color-surface-soft);
-  border: 1px solid #303037;
-  border-radius: 18px;
+  border: 1px solid var(--color-line-soft);
+  border-radius: var(--radius-card);
 }
 
 .pdf-reader__toolbar {
@@ -21,9 +21,9 @@
   height: 46px;
   padding: 0;
   color: var(--color-text);
-  background: #19191e;
-  border: 1px solid #393941;
-  border-radius: 14px;
+  background: var(--color-control);
+  border: 1px solid var(--color-control-line);
+  border-radius: var(--radius-control);
   cursor: pointer;
   font-size: 22px;
   transition: background-color var(--transition-fast), border-color var(--transition-fast), opacity var(--transition-fast);
@@ -53,8 +53,8 @@
   color: var(--color-text);
   color-scheme: dark;
   text-align: center;
-  background: #19191e;
-  border: 1px solid #393941;
+  background: var(--color-control);
+  border: 1px solid var(--color-control-line);
   border-radius: 11px;
 }
 
@@ -103,7 +103,7 @@
   background-position: 0 0, 12px 12px;
   background-size: 24px 24px;
   border: 1px solid #2d2d34;
-  border-radius: 14px;
+  border-radius: var(--radius-control);
   scrollbar-color: #45454f #17171b;
   touch-action: pan-y pinch-zoom;
 }
