@@ -7,6 +7,7 @@
 export const SITE_LINKS = Object.freeze({
   home: '/',
   literature: '/literature.html',
+  concept: '/concept.html',
   contact: '/contact.html',
   book: '/book.html',
 

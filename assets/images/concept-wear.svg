@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="410" viewBox="0 0 360 410">
+  <defs>
+    <radialGradient id="bg"><stop stop-color="#292930"/><stop offset="1" stop-color="#111115"/></radialGradient>
+    <linearGradient id="fabric" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#414149"/><stop offset=".5" stop-color="#1d1d23"/><stop offset="1" stop-color="#292931"/></linearGradient>
+    <mask id="cut"><rect width="360" height="410" fill="white"/><rect x="223" y="259" width="37" height="37" fill="black"/></mask>
+    <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" stroke="#8d8d99" stroke-width=".5" fill="none"/></pattern>
+  </defs>
+  <rect width="360" height="410" fill="url(#bg)"/>
+  <rect x="42" y="70" width="277" height="280" fill="url(#grid)" opacity=".1"/>
+  <ellipse cx="180" cy="348" rx="100" ry="12" fill="#07070a" opacity=".6"/>
+  <g mask="url(#cut)">
+    <path d="M140 85L101 104L48 168L87 204L111 180L105 329Q178 342 255 329L249 180L273 204L312 168L259 104L220 85Q180 113 140 85Z" fill="url(#fabric)" stroke="#74747f" stroke-width="1"/>
+    <path d="M140 85Q180 113 220 85L212 102Q180 126 148 102Z" fill="#131318" stroke="#62626c" stroke-width=".7"/>
+    <path d="M102 107L116 146L111 181M258 107L244 146L249 181M55 166L91 196M305 166L269 196M106 320Q181 333 254 320" fill="none" stroke="#a0a0ab" stroke-opacity=".25"/>
+    <path d="M126 178L132 280M229 186L232 246" stroke="#8e8e9a" stroke-opacity=".15" fill="none"/>
+    <path d="M164 116Q181 121 196 116" fill="none" stroke="#bdbdc7" stroke-opacity=".3"/>
+  </g>
+  <rect x="223" y="259" width="37" height="37" fill="none" stroke="#d1d1db" stroke-width=".7"/>
+  <path d="M242 279L288 301H324" fill="none" stroke="#a7a7b3" stroke-width=".6"/>
+  <circle cx="242" cy="279" r="1.5" fill="#e4e4eb"/>
+  <text x="276" y="316" fill="#bcbcc8" font-family="monospace" font-size="7" letter-spacing=".6">DATA NOT FOUND</text>
+  <text x="20" y="389" fill="#81818f" font-family="monospace" font-size="8" letter-spacing="1">MISSING / CONCEPT STUDY</text>
+  <path d="M19 58H27M23 54V62M333 352H341M337 348V356" stroke="#747480" stroke-width=".8"/>
+</svg>
